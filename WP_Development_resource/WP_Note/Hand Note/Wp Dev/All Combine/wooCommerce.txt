@@ -1,0 +1,339 @@
+						
+
+							Contents:
+
+	1. For woocommerce get template parts. findout first themes directory in otherwise findout plugin directory the specifics files.
+	2. How to know which hoocks are added with which function.
+	3. sale remove
+	4. Remove sidebar
+	5. custom fields modify biiling page
+	6. Any things update for database
+	7. add and update any fields ,Update the order meta with field value
+	8. for comment update for database
+	9.  mimi cart:
+		9.1 for mini cart url find out
+		9.2 for Total $dolar mini cart  find out
+		9.3 for Total how mini cart  find out:  for display
+		9.4 mini cart count , images, price total example.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. // ****  For woocommerce get template parts. findout first themes directory in otherwise findout plugin directory the specifics files 
+
+  wc_get_template( 'global/breadcrumb.php', $args );
+
+
+*** wooCommerce products loop==================================
+
+if ( woocommerce_product_loop() ) {
+
+	/**
+	 * Hook: woocommerce_before_shop_loop.
+	 *
+	 * @hooked woocommerce_output_all_notices - 10
+	 * @hooked woocommerce_result_count - 20
+	 * @hooked woocommerce_catalog_ordering - 30
+	 */
+	do_action( 'woocommerce_before_shop_loop' );
+
+	woocommerce_product_loop_start();
+
+	if ( wc_get_loop_prop( 'total' ) ) {
+		while ( have_posts() ) {
+			the_post();
+
+			/**
+			 * Hook: woocommerce_shop_loop.
+			 *
+			 * @hooked WC_Structured_Data::generate_product_data() - 10
+			 */
+			do_action( 'woocommerce_shop_loop' );
+
+			wc_get_template_part( 'content', 'product' );
+		}
+	}
+
+	woocommerce_product_loop_end();
+
+	/**
+	 * Hook: woocommerce_after_shop_loop.
+	 *
+	 * @hooked woocommerce_pagination - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop' );
+} else {
+	/**
+	 * Hook: woocommerce_no_products_found.
+	 *
+	 * @hooked wc_no_products_found - 10
+	 */
+	do_action( 'woocommerce_no_products_found' );
+}
+
+/**
+ * Hook: woocommerce_after_main_content.
+ *
+ * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+ */
+do_action( 'woocommerce_after_main_content' );
+
+/**
+ * Hook: woocommerce_sidebar.
+ *
+ * @hooked woocommerce_get_sidebar - 10
+ */
+do_action( 'woocommerce_sidebar' );
+
+
+
+
+
+2. // **** How to know which hoocks are added with which function=========================
+
+		global $wp_filter;
+
+		print_r( $wp_filter);
+
+
+
+	specific hock search:
+
+		print_r( $wp_filter['woocommerce_archive_description']);
+
+	and  specific search:
+ 		$order = get_query_var('order-received');
+
+
+
+______________________________________________________________________________________
+
+
+
+3. // ** sale remove =============
+
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+
+
+
+
+4. // * Remove sidebar ==================
+
+remove_action('woocommerce_sidebar', '  woocommerce_get_sidebar', 10);
+
+
+
+
+
+5. // ** custom fields modify biiling page ===========
+
+add_filter( 'woocommerce_checkout_fields' , 'ourcustom_Fields' );
+
+		// Our hooked in function - $fields is passed via the filter!
+		
+		function ourcustom_Fields( $defults ) {
+		     
+		     // unset($defults['billing']['pingMe']);
+
+		    
+
+		     $defults['billing']['pingMe'] = array(
+		     	'type'=> 'textarea',
+		     	'label'=> 'Ping Me',
+		     	'priority'=> 120		     
+		     );
+
+		      
+		     return $defults;
+		   }
+
+
+
+6.  // any things update for database===========================================
+
+update_post_meta();
+
+
+
+7. // add and update any fields ,Update the order meta with field value
+ 
+		add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_metaFields' );
+
+		function my_custom_metaFields( $order_id ) {
+		    if ( ! empty( $_POST['pingMe'] ) ) {
+		        update_post_meta( $order_id, 'Ping Me', sanitize_text_field( $_POST['Ping Me'] ) );
+		    }
+		}
+
+			// Display field value on the order edit page
+		 
+		add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_displayMeta', 10, 1 );
+
+		function my_custom_displayMeta($order){
+		    echo '<p><strong>'.__(' Ping Me').':</strong> ' . get_post_meta( $order->id, 'Ping Me', true ) . '</p>';
+		}
+
+		add_action('show_frontend', function(){
+			$order = get_query_var('order-received');
+ 
+			echo get_post_meta( $order->id, 'Ping Me', true );
+			// echo $order;
+		});
+ 
+ 
+
+
+
+
+
+8. // for comment update for database  ======================
+
+		update_comment_meta();
+
+
+
+
+
+
+
+_________________________________________________________________________________________________
+
+
+9.  mimi cart:
+
+
+9.1 // ********for mini cart url find out:
+
+	echo wc()->cart->get_cart_url();
+	echo wc()->cart->get_checkout_url();
+
+
+9.2 // ********for Total $dolar mini cart  find out:
+
+	echo wc()->cart->get_cart_total();
+
+
+9.3 // ********for Total how mini cart  find out:  for display ==================
+
+	echo wc()->cart->get_cart_contents_count();
+  
+	Backend:==================
+	
+	
+		 // define the woocommerce_add_to_cart_fragments callback 
+			function filter_woocommerce_add_to_cart_fragments( $array ) { 
+			    
+			    $array['p.cartadd-total'] = '<p class="cartadd-total"> Your Cart :'.WC()->cart->get_cart_contents_count(). '</p>';
+			    return $array; 
+			}; 
+			         
+	   		// add the filter 
+			add_filter( 'woocommerce_add_to_cart_fragments', 'filter_woocommerce_add_to_cart_fragments', 10, 1 ); 
+
+	
+
+
+				OR,
+
+
+
+		// define the woocommerce_add_to_cart_fragments callback 
+			function filter_woocommerce_add_to_cart_fragments( $defualt ) { 
+
+				ob_start(); ?>
+
+				<p class="cartadd-total"> Your Cart :
+                        <?php echo WC()->cart->get_cart_contents_count(); ?>
+                    </p>
+
+
+			    <?php
+			    $defualt['p.cartadd-total'] = ob_get_clean();
+			    return $defualt; 
+			}; 
+			         
+	          // add the filter 
+			add_filter( 'woocommerce_add_to_cart_fragments', 'filter_woocommerce_add_to_cart_fragments', 10, 1 ); 
+
+
+
+
+
+
+9.4 //  mini cart count , images, price total example:
+
+     // for display:
+
+		 <div class="woo-minicart">
+	                    <p class="cartadd-total"> Your Cart :
+	                        <?php echo WC()->cart->get_cart_contents_count(); ?>
+	                    </p>
+	                    <ul>
+							<?php foreach( WC()->cart->get_cart() as $single => $value) : ?>
+
+							<?php $singleProduct =  $value['data']; ?>
+
+	                        <li>
+	                            <?php echo $singleProduct->get_image(); ?> <br>
+	                            <?php echo $singleProduct->get_title(); ?> <br>
+	                            <?php echo get_woocommerce_currency_symbol(). ' ' .$singleProduct->get_price(); ?> <br>
+
+					<a href="<?php echo WC_Cart::get_remove_url( $single );?>">Remove</a>
+
+	                            
+	                        </li>
+	                        <?php endforeach; ?>
+	                    </ul>
+                </div>
+
+
+	// functions.php backend:
+
+	
+		function filter_woocommerce_add_to_cart_fragments( $defualt ) { 
+
+				ob_start(); ?>
+					
+					<div class="woo-minicart">
+	                    <p class="cartadd-total"> Your Cart :
+	                        <?php echo WC()->cart->get_cart_contents_count(); ?>
+	                    </p>
+	                    <ul>
+							<?php foreach(WC()->cart->get_cart() as $single=> $value): ?>
+
+							<?php $singleProduct =  $value['data']; ?>
+
+	                        <li>
+	                            <?php echo $singleProduct->get_image(); ?> <br>
+	                            <?php echo $singleProduct->get_title(); ?> <br>
+	                            <?php echo get_woocommerce_currency_symbol(). ' ' .$singleProduct->get_price(); ?> <br>
+
+					<a href="<?php echo WC_Cart::get_remove_url( $single );?>">Remove</a>
+
+	                            
+	                        </li>
+	                        <?php endforeach; ?>
+	                    </ul>
+                </div>
+				
+
+
+			    <?php  $defualt['div.woo-minicart'] = ob_get_clean();
+			    return $defualt; 
+			}; 
+			         
+	   // add the filter 
+			add_filter( 'woocommerce_add_to_cart_fragments', 'filter_woocommerce_add_to_cart_fragments', 10, 1 ); 
+
+

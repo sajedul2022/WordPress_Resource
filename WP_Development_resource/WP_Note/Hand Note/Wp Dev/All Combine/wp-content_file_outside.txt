@@ -1,0 +1,11 @@
+
+// write wp config file:
+
+define('WP_CONTENT_DIR',
+ $_SERVER['DOCUMENT_ROOT'].'\wdpf-51\me\full_stack_web_developer\WP\wp-content');
+
+ define('WP_CONTENT_URL',
+ 'http://localhost/wdpf-51/me/full_stack_web_developer/WP/wp_project3/wp-content');
+
+
+// and wp-content file out upper level cut and paste outside (Location)

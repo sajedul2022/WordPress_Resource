@@ -1,0 +1,5 @@
+<!-- Ticker run -->
+		<?php if(function_exists('News_ticker_enqueue')){
+					echo News_ticker_enqueue();
+			} 
+		?>

@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <title>Theia Sticky Sidebar Documentation</title>
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css"
+          media="screen, projection">
+    <style type="text/css" media="screen">
+        .center img {
+            vertical-align: middle;
+        }
+
+        p, table, hr {
+            margin-bottom: 25px;
+        }
+
+        .box p {
+            margin-bottom: 10px;
+        }
+
+        .thumbnailContainer {
+            text-align: center;
+        }
+        
+        .thumbnailContainer img {
+            max-width: 100%;
+        }
+
+        .thumbnail {
+            border: 1px solid #ccc;
+            padding: 1px;
+        }
+
+        .basicTable {
+            border-collapse: collapse;
+        }
+
+        .basicTable td {
+            border: 1px solid #ccc;
+        }
+
+        .basicTable thead td {
+            font-weight: bold;
+        }
+
+        pre {
+            font-family: monospace;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        h1 img {
+            margin: 0 20px;
+        }
+
+        h4 {
+            font-weight: bold;
+        }
+
+        .borderTop {
+            background: #fafcfc;
+            overflow: hidden;
+        }
+
+        .changelog_iframe {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin: 0 0 25px 0;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="container">
+    <h1 class="center">
+        <a href="http://wecodepixels.com/theia-sticky-sidebar-for-wordpress/?utm_source=theia-sticky-sidebar-for-wordpress"><img
+                src="assets/images/display80x80.png"></a>
+        Theia Sticky Sidebar
+        <a href="http://wecodepixels.com/?utm_source=theia-sticky-sidebar-for-wordpress"><img
+                src="assets/images/wecodepixels-logo.png"></a>
+    </h1>
+    
+    <div class="borderTop">
+        <div class="span-8 colborder prepend-1">
+            <p class="prepend-top">
+                <strong>
+                    <a href="http://wecodepixels.com/theia-sticky-sidebar-for-wordpress/?utm_source=theia-sticky-sidebar-for-wordpress">Theia
+                        Sticky Sidebar</a></strong>
+                by
+                <strong><a
+                        href="http://wecodepixels.com/?utm_source=theia-sticky-sidebar-for-wordpress">WeCodePixels</a></strong>
+                <br>
+                <br>
+                Version: <strong>1.3.1</strong>
+                <br>
+                Updated: <strong>2015-06-02</strong>
+
+                <br>
+                <br>
+                <strong>
+                    <a href="http://wecodepixels.com/theia-sticky-sidebar-for-wordpress/support/?utm_source=theia-sticky-sidebar-for-wordpress">Open
+                        a
+                        Support
+                        Ticket</a><br>
+                </strong>
+            </p>
+        </div>
+
+        <div class="span-10 last">
+            <div class="prepend-top">
+                <h2 id="toc" class="alt">Table of Contents</h2>
+                <ul class="alpha">
+                    <li><a href="#quickStartGuide">Quick Start Guide</a></li>
+                    <li><a href="#configuration">Configuration</a></li>
+                    <li><a href="#tssAdvancedUsage">Advanced Usage</a></li>
+                    <li><a href="#supportedThemes">Themes that work out-of-the-box</a></li>
+                    <li><a href="#changelog">Changelog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3 id="quickStartGuide"><strong>Quick Start Guide</strong> - <a href="#toc">top</a></h3>
+
+    <p>This small guide will help you get your new plugin up and running in just a few minutes.</p>
+
+    <p>First of all, you need to download the plugin file and unzip it (if you're reading this, you've probably done so
+        already). Now you need to do <b>one</b> of the following:</p>
+
+    <ol style="list-style-type: lower-alpha">
+        <li style="margin-bottom: 13px">
+            <ol>
+                <li>In the WordPress administration panel, open the "Plugins -> Add new -> Upload" page.</li>
+                <li>Select and upload the "theia-sticky-sidebar.zip" file.</li>
+            </ol>
+        </li>
+        <li>
+            <ol>
+                <li>Unzip the "theia-sticky-sidebar.zip" archive into your WordPress plugins folder (located at
+                    "/wp-content/plugins/").
+                </li>
+                <li>Open your browser and go to your WordPress admin panel.</li>
+                <li>Open the "Plugins -> Installed plugins" page and activate the "Theia Sticky Sidebar" plugin.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <p>For customizing the plugin, open the "Settings -> Theia Sticky Sidebar" page.</p>
+
+    <hr>
+
+    <h3 id="configuration"><strong>Configuration</strong> - <a href="#toc">top</a></h3>
+
+    <p>
+        After installing and activating the plugin, you should open your homepage and check if the plugin works
+        out-of-the-box. Just scroll down and see if the sidebar remains permanently visible.
+        If it doesn't, you should follow these next steps.
+    </p>
+
+    <p>
+        What we need to do is tell the plugin exactly what HTML element represents the sidebar.
+        For that we're going to use Google Chrome, which is available on all major platforms (Windows, Mac OS and
+        Linux).
+        We're going to use the default WordPress Twenty Twelve theme as an example.
+    </p>
+
+    <p>
+        1. First, open your homepage in <strong>Google Chrome</strong>. It should look something like this:
+
+    <div class="thumbnailContainer">
+        <a href="assets/images/newpage119.png"><img src="assets/images/newpage119.png"></a>
+    </div>
+    </p>
+
+    <p>
+        2. Now locate the sidebar and right-click on it. A menu should pop-up. Select <strong>"Inspect Element"</strong>.
+
+    <div class="thumbnailContainer">
+        <a href="assets/images/newpage120.png"><img src="assets/images/newpage120.png"></a>
+    </div>
+    </p>
+
+    <p>
+        3. The <strong>Developer Tools</strong> should now be displayed on the bottom, and the element you've
+        right-clicked on should be selected. In this case, we've selected the sidebar's "Meta" heading.
+
+    <div class="thumbnailContainer">
+        <a href="assets/images/newpage121.png"><img src="assets/images/newpage121.png"></a>
+    </div>
+    </p>
+
+    <p>
+        4. In the Developer Tools from the bottom of the window, search upwards for the sidebar element by moving your
+        mouse. The elements you're hovering over will be highlighted.
+        Search for the first parent element that highlights the entire sidebar. It usually has the ID or class name of
+        "sidebar", "sidebar-right", "secondary", etc..
+    </p>
+
+    <p>
+        In this example, the sidebar has the ID of "secondary". To identify it, we can use the
+        <strong>"#secondary"</strong> selector (notice the "#" in front of it, meaning this is an "ID").
+        If this sidebar didn't have an ID, we could have used it's "widget-area" class to identify it, like so:
+        <strong>".widget-area"</strong> (notice the "." in front of it, meaning this is a "class").
+
+    <div class="thumbnailContainer">
+        <a href="assets/images/newpage122.png"><img src="assets/images/newpage122.png"></a>
+    </div>
+    </p>
+
+    <p>
+        5. Now we must do the same thing to locate the container of the page. This is the first parent element that
+        contains both the sidebar and the actual content of the site.
+        It usually has the ID or class name of "main", "main-container", etc..
+        In this example, we're going to use the <strong>"#main"</strong> selector to identify it.
+
+    <div class="thumbnailContainer">
+        <a href="assets/images/newpage123.png"><img src="assets/images/newpage123.png"></a>
+    </div>
+    </p>
+
+    <p>
+        6. Finally, we're going to open the plugin's settings page from the administration panel. Enter the "Sidebar CSS
+        selector" and the "Container CSS selector".
+        In this case, we have <strong>"#secondary"</strong> and <strong>"#main"</strong>.
+
+    <div class="thumbnailContainer">
+        <a href="assets/images/newpage124.png"><img src="assets/images/newpage124.png"></a>
+    </div>
+    </p>
+
+    <p>
+        Note that if you have any issues, you can send me an email with your website address and I'll find these
+        selectors for you.
+    </p>
+
+    <hr>
+
+    <h3 id="tssAdvancedUsage"><strong>Advanced Usage</strong> - <a href="#toc">top</a></h3>
+
+    <p>
+		In order for Theia Sticky Sidebar to work, your website's HTML structure should be similar to the following:
+
+	<div class="highlight-code">
+    <pre class="hacking-margin desired-font">&lt;<span class="pl-ent-code">div</span> <span class="pl-e-code">class</span>=<span class="pl-s-code"><span class="pl-pds-code">"</span>wrapper<span class="pl-pds-code">"</span></span>&gt;
+  &lt;<span class="pl-ent-code">div</span> <span class="pl-e-code">class</span>=<span class="pl-s-code"><span class="pl-pds-code">"</span>content<span class="pl-pds-code">"</span></span>&gt;
+    &lt;<span class="pl-ent-code">div</span> <span class="pl-e-code">class</span>=<span class="pl-s-code"><span class="pl-pds-code">"</span>theiaStickySidebar<span class="pl-pds-code">"</span></span>&gt;
+    ...
+    &lt;/<span class="pl-ent-code">div</span>&gt;
+  &lt;/<span class="pl-ent-code">div</span>&gt;
+  &lt;<span class="pl-ent-code">div</span> <span class="pl-e-code">class</span>=<span class="pl-s-code"><span class="pl-pds-code">"</span>sidebar<span class="pl-pds-code">"</span></span>&gt;
+    &lt;<span class="pl-ent-code">div</span> <span class="pl-e-code">class</span>=<span class="pl-s-code"><span class="pl-pds-code">"</span>theiaStickySidebar<span class="pl-pds-code">"</span></span>&gt;
+    ...
+    &lt;/<span class="pl-ent-code">div</span>&gt;
+  &lt;/<span class="pl-ent-code">div</span>&gt;
+&lt;/<span class="pl-ent-code">div</span>&gt;</pre></div>
+
+
+	</p>
+
+    <p>
+        Note that the inner "theiaStickySidebar" divs are optional, but highly recommended.
+        If you know some HTML basics you can edit your theme files and add them yourself (note that we strongly recommend doing this inside a child theme). Otherwise, the JavaScript plugin will automatically create them for you, but this can be problematic if you are using ads or iframes,
+        since they will be moved around in the DOM and as a result will get reloaded.
+    </p>
+
+    <hr>
+
+    <h3 id="supportedThemes"><strong>Themes that work out-of-the-box</strong> - <a href="#toc">top</a></h3>
+
+    <p>A number of themes have already been tested and work out-of-the-box without the need for further configuration.
+        Here is a <strong>partial</strong> list:</p>
+
+    <ul>
+        <li>Attitude by Theme Horse</li>
+        <li>Avada by Theme Fusion</li>
+        <li>Blue Diamond by Goodlayers</li>
+        <li>BoldR Lite WordPress Theme by Iceable Themes</li>
+        <li>Bolid Theme by Vergo</li>
+        <li>Boutique Shop by quitenicestuff</li>
+        <li>Bretheon by Muffin group</li>
+        <li>Catch Box by Catch Themes Team</li>
+        <li>Churchope by themoholics</li>
+        <li>Clean Retina by Theme Horse</li>
+        <li>Complexity by Jason Bobich</li>
+        <li>Coraline by Automattic</li>
+        <li>Custom Community by Themekraft</li>
+        <li>Customizr by nikeo</li>
+        <li>Destro by ThemeAlley.com</li>
+        <li>deTube by Cloud Stone</li>
+        <li>Directory by AitThemes</li>
+        <li>discover by Manishg</li>
+        <li>DynamiX by NorthVantage</li>
+        <li>Eclipse by CyberChimps</li>
+        <li>Ego by UDTHEMES</li>
+        <li>Evermore by Pexeto</li>
+        <li>EvoLve by Theme4Press</li>
+        <li>Expound by Konstantin Kovshenin</li>
+        <li>Flexform by Swift Ideas</li>
+        <li>Food Recipes by 960Development</li>
+        <li>Fundify by AppThemer</li>
+        <li>FUZZY by PEGO</li>
+        <li>Graphene by Syahir Hakim</li>
+        <li>Hitched by Studio164a</li>
+        <li>I Love It! by CosmoThemes</li>
+        <li>iFeature by CyberChimps</li>
+        <li>Impression by AIT-Themes.com</li>
+        <li>INOVADO by minti</li>
+        <li>Jarida by Mo3aser</li>
+        <li>JPhotolio by Jegtheme</li>
+        <li>Kaleido for WordPress by imaginem</li>
+        <li>Kallyas by Hogash</li>
+        <li>Kleo by Seventh Queen</li>
+        <li>Leaf by Brad Thomas</li>
+        <li>London Creative + by freshface</li>
+        <li>Mantra by Cryout Creations</li>
+        <li>Maya Shop by Your Inspiration Themes</li>
+        <li>Mural by unisphere</li>
+        <li>Nimble by Dream-Theme</li>
+        <li>OneTouch by Crumina</li>
+        <li>PageLines by PageLines</li>
+        <li>Parament by Automattic</li>
+        <li>Pinboard by One Designs</li>
+        <li>Radial Premium Theme by Orange Themes</li>
+        <li>Responsive by ThemeID by CyberChimps.com</li>
+        <li>Responsive Fullscreen Studio for WordPress by imaginem</li>
+        <li>RT-Theme Seventeen by Tolga Can</li>
+        <li>Skinizer by WPScientist</li>
+        <li>Smart IT by ThemeMakers</li>
+        <li>Sommerce by Your Inspiration Themes</li>
+        <li>Sunny Blue Sky by Robert Brown</li>
+        <li>SuperMassive by GhostPool</li>
+        <li>Symplex by Kaptinlin</li>
+        <li>Terra by BlueOwlCreative</li>
+        <li>The Agency by OTOTW</li>
+        <li>Twenty Eleven by the WordPress team</li>
+        <li>Twenty Ten by the WordPress team</li>
+        <li>Twenty Twelve by the WordPress team</li>
+        <li>Twenty Thirteen by the WordPress team</li>
+        <li>Typegrid by WPBandit</li>
+        <li>U-Design by Andon</li>
+        <li>Victoria by system32</li>
+        <li>Weaver II by Bruce Wampler</li>
+        <li>WP Opulus by Nimbus Themes</li>
+        <li>Sterling by TrueThemes</li>
+        <li>Enfold by Kriesi</li>
+        <li>SimpleMag by ThemesIndep</li>
+        <li>POST by MoonThemes</li>
+        <li>OldPaper by thunderthemes</li>
+        <li>SmartMag by ThemeSphere</li>
+    </ul>
+    
+    <p>And many more that have been added since the writing of this list.</p>
+
+    <hr>
+
+    <h3 id="changelog"><strong>Changelog</strong> - <a href="#toc">top</a></h3>
+
+    <iframe class="changelog_iframe"
+            src="http://wecodepixels.com/theia-sticky-sidebar-for-wordpress/news"></iframe>
+
+    <hr>
+
+    <p class="append-bottom alt large"><strong>WeCodePixels</strong></p>
+
+    <p><a href="#toc">Go To Table of Contents</a></p>
+
+    <hr class="space">
+</div>
+</body>
+</html>

@@ -1,0 +1,540 @@
+{
+    "dup_type": "lite",
+    "created": "2022-09-27 12:38:26",
+    "version_dup": "1.5.0",
+    "version_wp": "4.9.21",
+    "version_db": "10.5.16",
+    "version_php": "7.4.30",
+    "version_os": "Linux",
+    "blogname": "Test Project",
+    "exportOnlyDB": 0,
+    "secure_on": false,
+    "secure_pass": "$2a$08$i.xCOgfusy5mg2DZOcardu37k4xCP4lD\/la6txnUt53PXwrpFhCp.",
+    "dbhost": null,
+    "dbname": null,
+    "dbuser": null,
+    "dbpass": null,
+    "cpnl_host": null,
+    "cpnl_user": null,
+    "cpnl_pass": null,
+    "cpnl_enable": null,
+    "wp_tableprefix": "wp_",
+    "mu_mode": 0,
+    "mu_generation": 0,
+    "mu_siteadmins": [
+        "admin"
+    ],
+    "subsites": [
+        {
+            "id": 1,
+            "domain": "szh.bdprogrammers.com",
+            "path": "\/",
+            "blogname": "Test Project",
+            "blog_prefix": "wp_",
+            "filteredTables": [],
+            "adminUsers": [
+                {
+                    "id": "1",
+                    "user_login": "wdpf51"
+                }
+            ],
+            "fullHomeUrl": "https:\/\/szh.bdprogrammers.com",
+            "fullSiteUrl": "https:\/\/szh.bdprogrammers.com",
+            "uploadPath": "wp-content\/uploads",
+            "fullUploadPath": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/uploads",
+            "fullUploadSafePath": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/uploads",
+            "fullUploadUrl": "https:\/\/szh.bdprogrammers.com\/wp-content\/uploads",
+            "filteredPaths": []
+        }
+    ],
+    "main_site_id": 1,
+    "mu_is_filtered": false,
+    "license_limit": 0,
+    "dbInfo": {
+        "buildMode": "MYSQLDUMP",
+        "charSetList": [
+            "utf8mb4"
+        ],
+        "collationList": [
+            "utf8mb4_unicode_ci"
+        ],
+        "engineList": [
+            "InnoDB"
+        ],
+        "isTablesUpperCase": 0,
+        "isNameUpperCase": 0,
+        "name": "u318076185_wp_project1",
+        "tablesBaseCount": 15,
+        "tablesFinalCount": 15,
+        "muFilteredTableCount": 0,
+        "tablesRowCount": 602,
+        "tablesSizeOnDisk": 2048000,
+        "tablesList": {
+            "wp_commentmeta": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            },
+            "wp_comments": {
+                "inaccurateRows": 1,
+                "insertedRows": 1,
+                "size": 98304
+            },
+            "wp_duplicator_packages": {
+                "inaccurateRows": 1,
+                "insertedRows": 1,
+                "size": 32768
+            },
+            "wp_links": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 32768
+            },
+            "wp_litespeed_url": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            },
+            "wp_litespeed_url_file": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 98304
+            },
+            "wp_options": {
+                "inaccurateRows": 338,
+                "insertedRows": 338,
+                "size": 1114112
+            },
+            "wp_postmeta": {
+                "inaccurateRows": 158,
+                "insertedRows": 158,
+                "size": 81920
+            },
+            "wp_posts": {
+                "inaccurateRows": 48,
+                "insertedRows": 48,
+                "size": 196608
+            },
+            "wp_termmeta": {
+                "inaccurateRows": 0,
+                "insertedRows": 0,
+                "size": 49152
+            },
+            "wp_terms": {
+                "inaccurateRows": 4,
+                "insertedRows": 4,
+                "size": 49152
+            },
+            "wp_term_relationships": {
+                "inaccurateRows": 6,
+                "insertedRows": 6,
+                "size": 32768
+            },
+            "wp_term_taxonomy": {
+                "inaccurateRows": 4,
+                "insertedRows": 4,
+                "size": 49152
+            },
+            "wp_usermeta": {
+                "inaccurateRows": 40,
+                "insertedRows": 40,
+                "size": 49152
+            },
+            "wp_users": {
+                "inaccurateRows": 2,
+                "insertedRows": 2,
+                "size": 65536
+            }
+        },
+        "varLowerCaseTables": "0",
+        "dbEngine": "MariaDB",
+        "version": "10.5.16",
+        "versionComment": "MariaDB Server",
+        "viewCount": 0,
+        "procCount": 0,
+        "funcCount": 0,
+        "triggerList": []
+    },
+    "packInfo": {
+        "packageId": 1,
+        "packageName": "20220927_hostinger",
+        "packageHash": "df76aa1-27123826",
+        "secondaryHash": "3a2273c-27123826"
+    },
+    "fileInfo": {
+        "dirCount": 387,
+        "fileCount": 2807,
+        "size": 26614523
+    },
+    "wpInfo": {
+        "version": "4.9.21",
+        "is_multisite": false,
+        "network_id": 1,
+        "targetRoot": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+        "targetPaths": [
+            "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh"
+        ],
+        "adminUsers": [
+            {
+                "id": "1",
+                "user_login": "wdpf51"
+            }
+        ],
+        "configs": {
+            "defines": {
+                "ABSPATH": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/",
+                    "inWpConfig": true
+                },
+                "DB_CHARSET": {
+                    "value": "utf8mb4",
+                    "inWpConfig": true
+                },
+                "DB_COLLATE": {
+                    "value": "",
+                    "inWpConfig": true
+                },
+                "AUTH_KEY": {
+                    "value": "_omX<,`a^^!Yif#x{6CSye=CXGvmzuih\/Z3Um>f2xIhl+$20^qw{S=vdcj:1W%$4",
+                    "inWpConfig": true
+                },
+                "SECURE_AUTH_KEY": {
+                    "value": "<(2:<u-~40}LhSV#.77IV8M=5xL2C UVwzUS.bNTKoJT5TZ}T]~jU#GwC%k=[Lbo",
+                    "inWpConfig": true
+                },
+                "LOGGED_IN_KEY": {
+                    "value": ">$ymYtt#[w>n#`5:SP+ufej;L[9.eDQ:k 2nyB{Cf4Lk. NP@AmBU@ Wv>zYn+q@",
+                    "inWpConfig": true
+                },
+                "NONCE_KEY": {
+                    "value": "6OEz=BZSU[1$&)9a6IGK!;UBNW26b$_g4lt&{s{a`I&C%8^o].;=aymi_?ite<vs",
+                    "inWpConfig": true
+                },
+                "AUTH_SALT": {
+                    "value": "Kef!%T-UPCDXDS3p$o8v<TV8<~!PoZid%QgW? 2;^Q:`[;#p;B:u&y>!-n&6KgTZ",
+                    "inWpConfig": true
+                },
+                "SECURE_AUTH_SALT": {
+                    "value": "t|<[39E0epnh_;cG.T{X}bac|B=U2QNoU,V;;5u?<}fzHa,t32ZXYlzom9avIY)0",
+                    "inWpConfig": true
+                },
+                "LOGGED_IN_SALT": {
+                    "value": "8*<f=c:lrxIS#`7vZ.-WS,`6b<Y^}bcv]#nDrB(WMm5mM9XHOp[YrVv$SzrO|\/ :",
+                    "inWpConfig": true
+                },
+                "NONCE_SALT": {
+                    "value": "$v!|NxnD^_E-G%x:?iKu#qbrbt6WC=OXXAtvX>m)E^ZuQ-GFJf?i717q.CIOj}4X",
+                    "inWpConfig": true
+                },
+                "WP_CONTENT_DIR": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content",
+                    "inWpConfig": false
+                },
+                "WP_CONTENT_URL": {
+                    "value": "https:\/\/szh.bdprogrammers.com\/wp-content",
+                    "inWpConfig": false
+                },
+                "WP_PLUGIN_DIR": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "WP_PLUGIN_URL": {
+                    "value": "https:\/\/szh.bdprogrammers.com\/wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "PLUGINDIR": {
+                    "value": "wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "AUTOSAVE_INTERVAL": {
+                    "value": 60,
+                    "inWpConfig": false
+                },
+                "WP_POST_REVISIONS": {
+                    "value": true,
+                    "inWpConfig": false
+                },
+                "COOKIE_DOMAIN": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "MULTISITE": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_DEBUG": {
+                    "value": false,
+                    "inWpConfig": true
+                },
+                "SCRIPT_DEBUG": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_DEBUG_LOG": {
+                    "value": false,
+                    "inWpConfig": false
+                },
+                "WP_DEBUG_DISPLAY": {
+                    "value": true,
+                    "inWpConfig": false
+                },
+                "WP_MEMORY_LIMIT": {
+                    "value": "40M",
+                    "inWpConfig": false
+                },
+                "WP_MAX_MEMORY_LIMIT": {
+                    "value": "512M",
+                    "inWpConfig": false
+                },
+                "WP_CACHE": {
+                    "value": true,
+                    "inWpConfig": true
+                },
+                "WP_LANG_DIR": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/languages",
+                    "inWpConfig": false
+                },
+                "WP_CRON_LOCK_TIMEOUT": {
+                    "value": 60,
+                    "inWpConfig": false
+                },
+                "COOKIEPATH": {
+                    "value": "\/",
+                    "inWpConfig": false
+                },
+                "SITECOOKIEPATH": {
+                    "value": "\/",
+                    "inWpConfig": false
+                },
+                "ADMIN_COOKIE_PATH": {
+                    "value": "\/wp-admin",
+                    "inWpConfig": false
+                },
+                "PLUGINS_COOKIE_PATH": {
+                    "value": "\/wp-content\/plugins",
+                    "inWpConfig": false
+                },
+                "TEMPLATEPATH": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/themes\/arilewp",
+                    "inWpConfig": false
+                },
+                "STYLESHEETPATH": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/themes\/arilewp",
+                    "inWpConfig": false
+                },
+                "EMPTY_TRASH_DAYS": {
+                    "value": 30,
+                    "inWpConfig": false
+                },
+                "FORCE_SSL_ADMIN": {
+                    "value": true,
+                    "inWpConfig": false
+                },
+                "WPMU_PLUGIN_DIR": {
+                    "value": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/mu-plugins",
+                    "inWpConfig": false
+                },
+                "WPMU_PLUGIN_URL": {
+                    "value": "https:\/\/szh.bdprogrammers.com\/wp-content\/mu-plugins",
+                    "inWpConfig": false
+                },
+                "MUPLUGINDIR": {
+                    "value": "wp-content\/mu-plugins",
+                    "inWpConfig": false
+                }
+            },
+            "realValues": {
+                "siteUrl": "https:\/\/szh.bdprogrammers.com",
+                "homeUrl": "https:\/\/szh.bdprogrammers.com",
+                "contentUrl": "https:\/\/szh.bdprogrammers.com\/wp-content",
+                "uploadBaseUrl": "https:\/\/szh.bdprogrammers.com\/wp-content\/uploads",
+                "pluginsUrl": "https:\/\/szh.bdprogrammers.com\/wp-content\/plugins",
+                "mupluginsUrl": "https:\/\/szh.bdprogrammers.com\/wp-content\/mu-plugins",
+                "themesUrl": "https:\/\/szh.bdprogrammers.com\/wp-content\/themes",
+                "originalPaths": {
+                    "home": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+                    "abs": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+                    "wpconfig": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+                    "wpcontent": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content",
+                    "uploads": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/uploads",
+                    "plugins": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/plugins",
+                    "muplugins": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/mu-plugins",
+                    "themes": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/themes"
+                },
+                "archivePaths": {
+                    "home": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+                    "abs": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+                    "wpconfig": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh",
+                    "wpcontent": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content",
+                    "uploads": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/uploads",
+                    "plugins": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/plugins",
+                    "muplugins": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/mu-plugins",
+                    "themes": "\/home\/u318076185\/domains\/bdprogrammers.com\/public_html\/szh\/wp-content\/themes"
+                }
+            }
+        },
+        "plugins": {
+            "akismet\/akismet.php": {
+                "slug": "akismet\/akismet.php",
+                "name": "Akismet Anti-Spam",
+                "version": "4.1",
+                "pluginURI": "https:\/\/akismet.com\/",
+                "author": "Automattic",
+                "authorURI": "https:\/\/automattic.com\/wordpress-plugins\/",
+                "description": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam<\/strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.",
+                "title": "Akismet Anti-Spam",
+                "networkActive": false,
+                "active": false,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "arile-extra\/arile-extra.php": {
+                "slug": "arile-extra\/arile-extra.php",
+                "name": "Arile Extra",
+                "version": "4.4",
+                "pluginURI": "https:\/\/themearile.com\/arilewp\/",
+                "author": "ThemeArile",
+                "authorURI": "https:\/\/themearile.com\/",
+                "description": "Arile Extra Enhances ThemeArile with additional functionality.",
+                "title": "Arile Extra",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "duplicator\/duplicator.php": {
+                "slug": "duplicator\/duplicator.php",
+                "name": "Duplicator",
+                "version": "1.5.0",
+                "pluginURI": "https:\/\/snapcreek.com\/duplicator\/duplicator-free\/",
+                "author": "Snap Creek",
+                "authorURI": "http:\/\/www.snapcreek.com\/duplicator\/",
+                "description": "Migrate and backup a copy of your WordPress files and database. Duplicate and move a site from one location to another quickly.",
+                "title": "Duplicator",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "hello.php": {
+                "slug": "hello.php",
+                "name": "Hello Dolly",
+                "version": "1.7",
+                "pluginURI": "http:\/\/wordpress.org\/plugins\/hello-dolly\/",
+                "author": "Matt Mullenweg",
+                "authorURI": "http:\/\/ma.tt\/",
+                "description": "This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly<\/cite> in the upper right of your admin screen on every page.",
+                "title": "Hello Dolly",
+                "networkActive": false,
+                "active": false,
+                "mustUse": false,
+                "dropIns": false
+            },
+            "litespeed-cache\/litespeed-cache.php": {
+                "slug": "litespeed-cache\/litespeed-cache.php",
+                "name": "LiteSpeed Cache",
+                "version": "5.2.1",
+                "pluginURI": "https:\/\/www.litespeedtech.com\/products\/cache-plugins\/wordpress-acceleration",
+                "author": "LiteSpeed Technologies",
+                "authorURI": "https:\/\/www.litespeedtech.com",
+                "description": "High-performance page caching and site optimization from LiteSpeed",
+                "title": "LiteSpeed Cache",
+                "networkActive": false,
+                "active": true,
+                "mustUse": false,
+                "dropIns": false
+            }
+        },
+        "themes": {
+            "arilewp": {
+                "slug": "arilewp",
+                "themeName": "ArileWP",
+                "version": "3.4.7",
+                "themeURI": "https:\/\/themearile.com\/arilewp-theme\/",
+                "parentTheme": false,
+                "template": "arilewp",
+                "stylesheet": "arilewp",
+                "description": "ArileWP is a powerful, modern and professional multipurpose WordPress theme with pixel perfect design and outstanding functionality. As well as sophisticated plus it has some exotic features like customization and clean code, advanced typography, sticky menu, logo upload, header image, Bootstrap 4 framework, built with SEO in mind, and theme info area besides being Mobile ready, translation ready (WPML, Polylang) and it's built to be beautiful on all screen sizes. The theme perfectly suited for business, consultant, finance, corporate, freelancer, agency, business promotion, electrician, industries, education, SEO, construction, fashion, online shop, health &amp; medical, Beauty &amp; spa salons, wedding, photography, gym, cafe, music, architecture, lawyer, restaurant, hotel, blog, magazine, travel agency and many other websites compatible. This theme supports the best Elementor page builder to create, edit and updates page designs as per the requirement. ArileWP also supports popular free and premium WordPress plugins such as Elementor, Yoast SEO, WooCommerce, Contact Form 7, Jetpack, Google Analytics and much more. Check the demo of ArileWP Pro https:\/\/themearile.com\/arilewp-pro-theme\/.",
+                "author": "ThemeArile",
+                "authorURI": "https:\/\/themearile.com",
+                "tags": [
+                    "one-column",
+                    "two-columns",
+                    "right-sidebar",
+                    "flexible-header",
+                    "custom-background",
+                    "custom-header",
+                    "custom-menu",
+                    "editor-style",
+                    "featured-images",
+                    "footer-widgets",
+                    "post-formats",
+                    "theme-options",
+                    "threaded-comments",
+                    "rtl-language-support",
+                    "translation-ready",
+                    "full-width-template",
+                    "custom-logo",
+                    "blog",
+                    "e-commerce",
+                    "portfolio"
+                ],
+                "isAllowed": true,
+                "isActive": true,
+                "defaultTheme": false
+            },
+            "twentyfifteen": {
+                "slug": "twentyfifteen",
+                "themeName": "Twenty Fifteen",
+                "version": "2.0",
+                "themeURI": "https:\/\/wordpress.org\/themes\/twentyfifteen\/",
+                "parentTheme": false,
+                "template": "twentyfifteen",
+                "stylesheet": "twentyfifteen",
+                "description": "Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.",
+                "author": "the WordPress team",
+                "authorURI": "https:\/\/wordpress.org\/",
+                "tags": [
+                    "blog",
+                    "two-columns",
+                    "left-sidebar",
+                    "accessibility-ready",
+                    "custom-background",
+                    "custom-colors",
+                    "custom-header",
+                    "custom-logo",
+                    "custom-menu",
+                    "editor-style",
+                    "featured-images",
+                    "microformats",
+                    "post-formats",
+                    "rtl-language-support",
+                    "sticky-post",
+                    "threaded-comments",
+                    "translation-ready"
+                ],
+                "isAllowed": true,
+                "isActive": false,
+                "defaultTheme": false
+            }
+        }
+    },
+    "opts_delete": "[\"duplicator_ui_view_state\",\"duplicator_package_active\",\"duplicator_settings\",\"duplicator_is_pro_enable_notice_dismissed\"]",
+    "brand": {
+        "name": "Duplicator",
+        "isDefault": true,
+        "logo": "<i class=\"fa fa-bolt fa-sm\"><\/i> Duplicator",
+        "enabled": false,
+        "style": []
+    },
+    "overwriteInstallerParams": {
+        "blogname": {
+            "value": "Test Project"
+        }
+    },
+    "installer_base_name": "installer.php.bak",
+    "installer_backup_name": "20220927_hostinger_df76aa11809512f58327_20220927123826_installer-backup.php",
+    "package_name": "20220927_hostinger_df76aa11809512f58327_20220927123826_archive.zip",
+    "package_hash": "df76aa1-27123826",
+    "package_notes": ""
+}

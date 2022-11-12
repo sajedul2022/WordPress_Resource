@@ -1,0 +1,115 @@
+Documentation: https://code.tutsplus.com/tutorials/how-to-create-custom-wordpress-writemeta-boxes--wp-20336
+
+				Contents:
+
+	1. Add meta box  [ add_meta_box() ]
+	2. Save / update the custom fields value [ add_action( 'save_post', 'cd_meta_box_save' ); ] [ update_post_meta() ]
+	3. Show OR Get custom fields value [ get_post_meta(get_the_id(), 'Meta_box_id', true); ]
+
+
+
+
+
+1. // Add meta box  [ add_meta_box() ]
+
+	add_meta_box( string $id, string $title, callable $callback, string|array|WP_Screen $screen = null, string $context = 'advanced', string $priority = 'default', array $callback_args = null );
+
+	#Description
+		Parameters
+
+		$id
+		(string) (Required) Meta box ID (used in the 'id' attribute for the meta box).
+
+		$title
+		(string) (Required) Title of the meta box.
+
+		$callback
+		(callable) (Required) Function that fills the box with the desired content. The function should echo its output.
+
+		$screen
+		(string|array|WP_Screen) (Optional) The screen or screens on which to show the box (such as a post type, 'link', or 'comment'). Accepts a single screen ID, WP_Screen object, or array of screen IDs. Default is the current screen. If you have used add_menu_page() or add_submenu_page() to create a new screen (and hence screen_id), make sure your menu slug conforms to the limits of sanitize_key() otherwise the 'screen' menu may not correctly render on your page.
+
+		Default value: null
+
+		$context
+		(string) (Optional) The context within the screen where the boxes should display. Available contexts vary from screen to screen. Post edit screen contexts include 'normal', 'side', and 'advanced'. Comments screen contexts include 'normal' and 'side'. Menus meta boxes (accordion sections) all use the 'side' context. Global
+
+		Default value: 'advanced'
+	
+		$priority
+		(string) (Optional) The priority within the context where the boxes should show ('high', 'low').
+
+		Default value: 'default'
+
+		$callback_args
+		(array) (Optional) Data that should be set as the $args property of the box array (which is the second parameter passed to your callback).
+
+		Default value: null
+
+
+
+	add_action( 'add_meta_boxes', 'adding_custom_meta_boxes', 10, 2 );
+
+	function adding_custom_meta_boxes( $post_type, $post ) {
+
+        add_meta_box( 
+           	'my-meta-box',
+        	__( 'My Meta Box' ),
+        	'render_my_meta_box',
+        	'post',
+        	'normal',
+        	'default'
+  	 );
+
+      }
+
+
+
+
+2. //  Save / update the custom fields value [ add_action( 'save_post', 'cd_meta_box_save' ); ] [ update_post_meta() ]
+
+
+	add_action( 'save_post', 'cd_meta_box_save' );
+
+	function cd_meta_box_save( $post_id ){
+     
+    		if( isset( $_POST['my_meta_box_select'] ) )
+        	update_post_meta( $post_id, 'my_meta_box_key', esc_attr( $_POST['my_meta_box_select'] ) );
+         
+	}
+
+
+
+
+
+3. // Show OR Get custom fields value [ get_post_meta(get_the_id(), 'Meta_box_id', true); ]
+
+	get_post_meta( int $post_id, string $key = '', bool $single = false );
+
+	$value = get_post_meta(get_the_id(), 'my_meta_box_key', true);
+
+
+
+
+
+4. //  Sanitize or validation 
+
+	add_action( 'save_post', 'cd_meta_box_save' );
+	
+	function cd_meta_box_save( $post_id ){
+    
+	// Bail if we're doing an auto save
+   	 if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+     
+    	// if our nonce isn't there, or we can't verify it, bail
+   	 if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return;
+     
+   	 // if our current user can't edit this post, bail
+    	if( !current_user_can( 'edit_post' ) ) return;
+	
+	// esc_attr( $_POST['my_meta_box_select'] )
+	update_post_meta( $post_id, 'my_meta_box_select', esc_attr( $_POST['my_meta_box_select'] ) );
+       }
+	 
+
+	

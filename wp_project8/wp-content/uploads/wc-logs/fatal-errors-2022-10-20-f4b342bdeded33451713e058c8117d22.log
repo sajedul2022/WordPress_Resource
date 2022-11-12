@@ -1,0 +1,14 @@
+2022-10-20T10:17:13+00:00 CRITICAL Cannot redeclare my_theme_support() (previously declared in E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\functions.php:7) in E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\functions.php on line 6
+
+2022-10-20T10:18:19+00:00 CRITICAL Cannot redeclare wooTheme_load_scripts() (previously declared in E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\functions.php:18) in E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\functions.php on line 14
+
+2022-10-20T12:56:40+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::have_posts() in E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\template-parts\content\content-single.php:5
+Stack trace:
+#0 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-includes\template.php(772): require()
+#1 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-includes\template.php(716): load_template('E:\\xampp\\htdocs...', false, Array)
+#2 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\single.php(40): get_template_part('template-parts/...', 'single')
+#4 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-includes\template-loader.php(106): include('E:\\xampp\\htdocs...')
+#5 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-blog-header.php(19): require_once('E:\\xampp\\htdocs...')
+#6 E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\index.php(17): requ in E:\xampp\htdocs\wdpf-51\me\f_s_w_d\WP\wp_project8\wp-content\themes\dukamarket\template-parts\content\content-single.php on line 5
+

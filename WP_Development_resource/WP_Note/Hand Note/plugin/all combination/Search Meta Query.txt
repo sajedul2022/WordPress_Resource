@@ -1,0 +1,40 @@
+
+
+ Based on any input field name or others query and get results by search should use:
+
+	'meta_query'
+
+
+
+	// Example:
+
+  	$class_value = isset($_REQUEST['student_search_class']) ? $_REQUEST['student_search_class'] : ''  ;
+
+	$section_value = isset($_REQUEST['student_search_section']) ? $_REQUEST['student_search_section'] :  ''  ;
+
+	$stu_name = isset($_REQUEST['student_name']) ? $_REQUEST['student_name'] :  ''  ;
+
+		
+
+
+			$student_post = new WP_Query(array(
+						'post_type' => 'school_students',
+						'post_per_page' => -1,
+						's' => $stu_name,
+						'meta_query' => array(
+
+							'relation' => 'OR',
+							array(
+
+								'key' => '_student_class',
+								'value' => $class_value,
+								'compare' => 'LIKE'
+
+							),
+							array(
+								'key' => '_student_section',
+								'value' => $section_value,
+								'compare' => 'LIKE'
+							)
+						)
+					));

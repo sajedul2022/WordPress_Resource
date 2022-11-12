@@ -1,0 +1,19 @@
+
+
+
+ current page ID:
+
+	global $post;
+	
+	$pageID = $post->ID;
+	
+
+
+ current page URL same page remain:
+
+	global $post;
+	
+	$pageID = $post->ID;
+	
+	$url = get_permalink($pageID);
+	

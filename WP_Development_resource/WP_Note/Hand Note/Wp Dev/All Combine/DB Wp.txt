@@ -1,0 +1,375 @@
+Wordpress database:
+
+documentation:  https://codex.wordpress.org/Class_Reference/wpdb
+		
+				CRUD = Create Read Update Delete
+
+			Contents: 
+
+		
+	1. Register activation hock use in theme and plugin
+	2. Register DEactivation hock use in theme and plugin 
+	3. Create database table  [ dbDelta( $sql ); ]
+	4. READ (Single value) Show in frontEnd Database data Read an Get data through any variables   [ $wpdb->get_var( 'query', column_offset, row_offset );]
+	5. READ (Multiple value) Show in frontEnd Database data Read an Get data through any variables  [ $wpdb->get_results( 'query', output_type ); ]
+	6. Insert data  [$wpdb->insert( $table, $data, $format );]
+	7. Replace  data in database [ $wpdb->replace( $table, $data, $format ); ]
+	8. Update data   [ $wpdb->update( $table, $data, $where, $format = null, $where_format = null );]
+	9. Delete data  [ $wpdb->delete( $table, $where, $where_format = null ); ]	
+	10. wp_redirect( Auto Refresh), get page Id, location Redirect 
+	11. security or validation
+
+
+
+
+
+
+1. ** Register activation hock use in theme and plugin
+
+	function myplugin_activate() {
+
+    // Activation code here...
+	}
+	register_activation_hook( __FILE__, 'myplugin_activate' );
+
+
+
+2. *** Register DEactivation hock use in theme and plugin
+
+	function myplugin_activate() {
+
+    // Activation code here...
+	}
+	register_deactivation_hook( __FILE__, 'myplugin_activate' );
+
+
+		
+3. ** Create database table:
+
+  	global $wpdb;
+
+
+	$prefix = $wpdb->prefix;
+	$table_name = $prefix. 'sajid';
+
+	$charset_collate = $wpdb->get_charset_collate();
+
+	$sql = "CREATE TABLE $table_name (
+	  id mediumint(9) NOT NULL AUTO_INCREMENT,
+	  time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+	  name tinytext NOT NULL,
+	  text text NOT NULL,
+	  url varchar(55) DEFAULT '' NOT NULL,
+	  PRIMARY KEY  (id)
+	) $charset_collate;";
+
+	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+	dbDelta( $sql );
+
+
+4. **  (Single value) Database data Read an Get data through any variables [ get_var( 'query', column_offset, row_offset );]
+
+	The get_var function returns a single variable from the database. Though only one variable is returned, the entire result of the query is cached for later use. Returns NULL if no result is found.
+
+
+ 	<?php $wpdb->get_var( 'query', column_offset, row_offset ); ?> 
+	
+	example: 
+	
+	// for single value get and show 
+		global $wpdb;
+
+		$prefix = $wpdb->prefix;
+
+		$table_name = $prefix. 'comments';
+
+
+		echo $wpdb->get_var("SELECT * FROM $table_name WHERE comment_ID  = 1", 2);
+
+	
+
+5. ** (Multiple value) Database data Read an Get data through any variables [ $wpdb->get_results( 'query', output_type ); ]
+ 
+	<?php $wpdb->get_results( 'query', output_type ); ?> 
+
+	query 
+		(string) The query you wish to run.
+	output_type 
+		One of four pre-defined constants. Defaults to OBJECT. See SELECT a Row and its examples for more information.
+		OBJECT - result will be output as a numerically indexed array of row objects.
+		OBJECT_K - result will be output as an associative array of row objects, using first column's values as keys (duplicates will be discarded).
+		ARRAY_A - result will be output as a numerically indexed array of associative arrays, using column names as keys.
+		ARRAY_N - result will be output as a numerically indexed array of numerically indexed arrays.
+		Since this function uses the $wpdb->query() function all the class variables are properly set. The results count for a 'SELECT' query will be stored in $wpdb->num_rows.
+
+	 Example:
+		
+	// for multiple data get and show
+		
+
+		global $wpdb;
+
+		$prefix = $wpdb->prefix;
+
+		$table_name = $prefix. 'term_taxonomy';
+
+
+		 $posts = $wpdb->get_results("SELECT * FROM $table_name WHERE term_id", OBJECT_K);
+		 
+
+		 foreach ($posts as $post) {
+			echo '* '. $post->taxonomy. '</br>';
+		}
+
+	 
+6. ** Insert data  [$wpdb->insert( $table, $data, $format );]
+	
+	<?php $wpdb->insert( $table, $data, $format ); ?> 
+
+       // insert data
+
+	function.php:
+
+	global $wpdb;
+	if (isset($_POST['submit'])) {
+		$tableName = $wpdb->prefix. 'sajid';
+		$name = $_POST['name'];
+
+		$wpdb->insert($tableName, array(
+			'name'=> $name
+		));
+
+		header('Location: http://localhost/comet/test-db/');
+			exit;
+	}
+
+	the specifics file:
+	
+ 		<form action="" method="POST">
+		 	
+		 	<input type="text" placeholder="Type your Text" name="name">
+
+		 	<input type="submit" value="Submit" name="submit">
+
+		 </form>
+
+7. **  Replace  data in database [ $wpdb->replace( $table, $data, $format ); ]
+		
+	function.php:
+
+		
+	// update or replace data -->
+		global $wpdb;
+
+		$id = $_GET['edit'];
+
+		$tableName = $wpdb->prefix. 'sajid';
+		$data = $_POST['name'];
+	
+
+	
+		if (isset($_POST['submitupdate'])) {
+
+
+
+		$wpdb->replace($tableName, array(
+			'name'=> $data,
+			'id'=> $id
+		));
+
+		header('Location: http://localhost/comet/test-db/');
+			exit;
+		}
+
+
+
+      FrontEnd :
+
+
+	<?php if (isset($_GET['edit'])) : ?>
+
+	<!-- retrive or get id from query -->
+
+	<?php 
+
+		$id = $_GET['edit'];
+
+			$value = $wpdb->get_var("SELECT name FROM $table_name WHERE id = $id");
+		
+
+	?>
+	
+
+
+
+  		<form action="" method="POST">
+		 	
+		 	<input type="text" placeholder="Type your Text" name="name" value="<?php echo $value; ?>">
+
+		 	<input type="submit" value="Update" name="submitupdate">
+
+		 </form>
+
+	<?php endif; ?>
+
+
+
+
+8. ** Update data   [ $wpdb->update( $table, $data, $where, $format = null, $where_format = null );]
+
+	function.php:
+
+	// Update data
+
+
+	global $wpdb;
+
+	$id = $_GET['edit'];
+
+	$tableName = $wpdb->prefix. 'sajid';
+	$data = $_POST['name'];
+	
+
+	
+	if (isset($_POST['submitupdate'])) {
+
+
+
+		$wpdb->update($tableName, array(
+			'name'=> $data
+			
+		),
+		array(
+			'id'=> $id
+		));
+
+		header('Location: http://localhost/comet/test-db/');
+			exit;
+	}
+
+
+	
+	FrontEnd :
+
+
+	<?php if (isset($_GET['edit'])) : ?>
+
+	<!-- retrive or get id from query -->
+
+	<?php 
+
+		$id = $_GET['edit'];
+
+			$value = $wpdb->get_var("SELECT name FROM $table_name WHERE id = $id");
+		
+
+	?>
+	
+
+
+
+  		<form action="" method="POST">
+		 	
+		 	<input type="text" placeholder="Type your Text" name="name" value="<?php echo $value; ?>">
+
+		 	<input type="submit" value="Update" name="submitupdate">
+
+		 </form>
+
+	<?php endif; ?>
+
+
+
+9. ** Delete data  [ $wpdb->delete( $table, $where, $where_format = null ); ]	
+
+	// function.php:
+
+	<!-- // Delete data -->
+
+ 		<?php
+
+ 		global $wpdb;
+
+
+		$tableName = $wpdb->prefix. 'sajid';
+
+ 		$deleteId = isset($_GET['delete']) ? $_GET['delete'] : "";
+
+ 		if (!empty($deleteId)) {
+ 		
+ 			 $wpdb->delete($tableName, array(
+ 			'id'=> $deleteId
+ 			));
+
+ 			 global $post; 
+ 		 	$id = $post->ID;
+ 		 	wp_redirect(get_page_link($id));
+ 		}
+
+		?>
+
+
+	
+	// FrontEnd show :
+
+		// show the form name and vaue Edit or Delete:
+
+			global $wpdb;
+
+					$prefix = $wpdb->prefix;
+
+					$table_name = $prefix. 'sajid';
+
+
+					 $infos = $wpdb->get_results("SELECT * FROM $table_name");
+					 
+
+					 foreach ($infos as $info) {
+					 	$id = $info->id;
+					 	$editLink = '?edit='.$id ;
+					 	$deleteLink = '?delete='.$id ;
+						echo $id. '. '  .$info->name. ' '. '<a href="'.$editLink.'">Edit </a>'. '<a href="'.$deleteLink.'"> Delete</a>'.'</br>';
+					}
+			?>
+
+
+
+10. ** wp_redirect( Auto Refresh), get page Id, location Redirect 
+
+	// get page id :
+
+		global $post; 
+ 		 $id = $post->ID;
+
+
+	// wp_redirect( Auto Refresh)
+
+		global $post; 
+ 		 $id = $post->ID;
+ 		 wp_redirect(get_page_link($id));
+
+	// location redirect one page to another page:
+
+		header('Location: http://localhost/comet/test-db/');
+			exit;
+
+
+
+11. ** security or validation:
+
+	<?php if (is_user_logged_in() && current_user_can('activate_plugins')) : ?>
+		
+	
+
+		 <form action="" method="POST">
+		 	
+		 	<input type="text" placeholder="Type your Text" name="name">
+
+		 	<input type="submit" value="Submit" name="submit">
+
+		 </form>
+
+
+	<?php endif; ?>
+
+	

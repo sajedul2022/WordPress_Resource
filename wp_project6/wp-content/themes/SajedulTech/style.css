@@ -1,0 +1,34 @@
+/*
+Theme Name: Sajedul Tech
+Text Domain: sajedulTech
+Version: 1.0
+Tested up to: 6.2
+Requires at least: 4.7 or More
+Requires PHP: 5.2.4 or More
+Description: This is First Theme From WDPF51.
+Tags: blog, Tech
+Author: Sajedul Islam
+Author URI: http://sajedul.bdprogrammers.com
+Theme URI: http://sajedul.bdprogrammers.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+.container {
+    margin: 0 auto;
+    width: 1150px;
+
+}
+
+.article{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 5px;
+}

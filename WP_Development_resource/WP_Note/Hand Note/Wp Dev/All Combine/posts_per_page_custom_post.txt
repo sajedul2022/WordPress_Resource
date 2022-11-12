@@ -1,0 +1,17 @@
+ <!-- post loop -->
+                                    <?php 
+                                        $sql = new WP_Query(array(
+                                            'post_type'=> 'slider',
+                                            'posts_per_page' => 1
+                                        ));
+                                        if($sql->have_posts()) :
+                                            while ($sql->have_posts()): $sql->the_post();       
+                                    ?>
+
+
+		// code here
+
+		<?php 
+                                            endwhile;
+                                        endif;
+		?>

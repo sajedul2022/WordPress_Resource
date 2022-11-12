@@ -1,0 +1,79 @@
+
+			Contents:
+
+	1.  Get custom field get or retrive anywhere: [  get_post_meta($post_id, $key, $single); ]
+	2.  Get PostMeta Functions
+	3.  Function Reference  [ Add, Update, Delete ]
+	4.  Taxonomy Retrieve the terms of the category [ get_the_terms( int|object $post, string $taxonomy ) ]
+
+
+
+
+
+
+	
+
+
+// Get custom field get or retrive anywhere:
+
+    get_post_meta($post_id, $key, $single);
+
+	$post_id is the ID of the post you want the meta values for. Use $post->ID to get a post's ID within the $post variable scope. Use get_the_ID() to retrieve the ID of the current item in the WordPress Loop.
+	$key is a string containing the name of the meta value you want.
+	$single can either be true or false. If set to true then the function will return a single result, as a string. If false, or not set, then the function returns an array of the custom fields.
+
+    
+	Example: get_post_meta(get_the_id(), $prefix.'doctors_name', true);
+
+
+
+2. // Get PostMeta Functions
+	
+	Internal Functions
+	These functions are intended for use inside The Loop, and all return arrays.
+
+	get_post_custom()
+	Get all key/value data for the current post.
+
+	get_post_custom_keys()
+	Get a list of all key names for the current post.
+
+	get_post_custom_values($key)
+	Get the list of values for a particular key on the current post.
+
+	get_post_meta($post_id, $key, $single = false)
+	In WP 1.5 and beyond, this function returns the meta information without cache problems. The function requires the post id, the key, and if $single is set to TRUE, it returns only the first result (NOT as an array) for PHP use.
+
+
+3. // Function Reference
+
+	Add, Update, Delete-:
+
+	add_post_meta()
+	update_post_meta()
+	delete_post_meta()
+	Get Custom Values/Keys
+	get_post_custom()
+	get_post_custom_values()
+	get_post_custom_keys()
+
+
+	Template Tags-:
+
+	the_meta()
+	get_post_meta()
+
+
+
+
+4. // Taxonomy Retrieve the terms of the category
+
+	 get_the_terms( int|object $post, string $taxonomy )
+	Retrieve the terms of the taxonomy that are attached to the post.
+
+	Parameters #Parameters
+	$post
+	(int|object) (Required) Post ID or object.
+
+	$taxonomy
+	(string) (Required) Taxonomy name.

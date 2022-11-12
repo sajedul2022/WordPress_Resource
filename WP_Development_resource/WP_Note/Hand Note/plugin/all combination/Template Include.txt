@@ -1,0 +1,38 @@
+
+
+
+// Specfic page Specific Template or Redirect page Oe page to another page
+
+	
+
+	add_filter('template_include', 'student_search_template');
+
+	locate_template('search-student.php');
+
+
+	example: 
+
+	// template include hook 
+
+
+		add_filter('template_include', 'student_search_template');
+
+		function student_search_template( $def ){
+
+			if( isset($_GET['search']) && $_GET['search'] == 'student' ){
+			$def = locate_template('search-student.php');
+		       }
+
+		return $def;
+		}
+
+
+		
+	// frontend: 
+
+	<input type="hidden" name="search" value="student">
+
+
+
+
+	

@@ -1,0 +1,493 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Flex Mag Theme Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		img { margin: 20px 0; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Flex Mag&rdquo; Documentation by &ldquo;MVP Themes&rdquo; v1.12</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;Flex Mag&rdquo;</h1>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: September 3, 2015<br>
+					By: MVP Themes<br>
+					Support: <a href="http://www.mvpthemes.com/support">Support Center</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to visit the MVP Themes Support Center <a href="http://www.mvpthemes.com/support">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ul class="alpha">
+			<li><a href="#disclaimer">Disclaimer</a></li>
+			<li><a href="#installation">Installation/Homepage Setup</a></li>
+			<li><a href="#update">Updating the Theme</a></li>
+			<li><a href="#themeoptions">Theme Options</a></li>
+			<li><a href="#menus">Custom Menus</a></li>
+			<li><a href="#widgets">Widgets</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#background">Background</a></li>
+			<li><a href="#post-options">Post Options</a></li>
+			<li><a href="#page-templates">Page Templates</a></li>
+			<li><a href="#scoreboard">Scoreboard</a></li>
+			<li><a href="#sidebars">Sticky Sidebars (Theia Sticky Sidebar)</a></li>
+			<li><a href="#authorinfo">Author Info</a></li>
+			<li><a href="#translation">Translation Files</a></li>
+			<li><a href="#woocommerce">WooCommerce</a></li>
+			<li><a href="#bbpress">bbPress</a></li>
+			<li><a href="#css">CSS Files</a></li>
+			<li><a href="#js">Javascript Files</a></li>
+			<li><a href="#support">Support</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ul>
+
+		<hr>
+
+		<h3 id="disclaimer"><strong>Disclaimer</strong> - <a href="#toc">top</a></h3>
+		<p>Although support is not required of ThemeForest authors, I do offer support for the theme and its core features and functionality. I cannot guarantee that this theme will function with all third-party components and plugins. Flex Mag Theme is presented as is.</p>
+
+		<hr>
+
+		<h3 id="installation"><strong>Installation/Homepage Setup</strong> - <a href="#toc">top</a></h3>
+
+		<ol>
+			<li>Make sure that you have the latest version of Wordpress installed.</li>
+			<li>You can upload Flex Mag to Wordpress in one of two different ways:
+				<ul>
+					<li>Extract the <strong>flex-mag.zip</strong> and upload the extracted <strong>flex-mag</strong> folder to the <strong>/wp-content/themes/</strong> directory on your FTP server.</li>
+					<li><strong>OR</strong> go to <strong>Appearance > Themes</strong> and click on the <strong>Add New</strong> link at the top. Then click <strong>Upload Theme</strong> and click <strong>Choose File</strong>, then select <strong>flexmag.zip</strong> and click <strong>Install Now</strong>.</li>
+				</ul>
+			</li>
+			<li>After you upload the theme, activate it by going to <strong>Appearance > Themes</strong> and place your mouse over <strong>Flex Mag</strong> and click the <strong>Activate</strong> button underneath.</li>
+		</ol>
+
+		<p>After installing the theme, you can import the XML data file (located in the XML Data folder of the original zip file), which will populate your theme with dummy posts, categories, tags, and menus. For more information about how to import Wordpress XML data, <a href="http://codex.wordpress.org/Importing_Content" target="_blank">click here</a> and scroll down to the Wordpress section.</p>
+
+		<p>NOTE: The XML data does not come with the images from the demo, which are not licensed to be included in the theme file.</p>
+
+		<p>In order to utilize the Featured Posts section like in the demo, you will have to set up a static homepage by doing the following:</p>
+
+		<ol>
+			<li>Go to <strong>Pages > Add New</strong>. Enter <strong>Home</strong> as the title and in the <strong>Page Attributes</strong> section, select <strong>Home</strong> from the <strong>Templates</strong> dropdown menu on the right. Click <strong>Publish</strong>.</li>
+			<li>Go to <strong>Settings > Reading</strong> and select the <strong>A static page</strong> radio button and in the <strong>Front Page:</strong> dropdown menu, select <strong>Home</strong>. Click <strong>Save Changes</strong></li>
+			<li>Go to <strong>Appearance > Flex Mag Options</strong> and click <strong>Reset Options</strong>.</li>
+		</ol>
+
+		<hr>
+
+		<h3 id="update"><strong>Updating the Theme</strong> - <a href="#toc">top</a></h3>
+
+		<p>From time to time, a theme update will be released that either fixes a bug and/or adds new features to the theme. You can update the theme in one of two ways:
+
+		<ol>
+			<li>Remove the old version of the theme by going to <strong>Appearance > Themes</strong> and activating another theme (you may want to place your site in Maintenance mode via a plugin). Then, hover your mouse over the Flex Mag theme image and click <strong>Theme Details</strong>. Then click <strong>delete</strong> in the lower right corner of the window that appears. Then, follow the installation instructions above to install the new version of the theme.</li>
+			<li><strong>OR</strong> you can upload the new <strong>/flex-mag</strong> folder (located in the <strong>flex-mag.zip</strong> file) via FTP and overwrite the old files.</li>
+		</ol>
+
+		<p><strong style="color: #ef0000;">NOTE: Updating the theme will overwrite any changes you made to any of the core files (index.php, style.css, header.php, etc), however, you will not lose any changes you made to the Theme Options, menus, widgets, etc.</strong></p>
+
+		<p><strong style="color: #ef0000;">Also, make sure to go to your Theme Options and click "Save all changes" after each time you update the theme to make sure any new options are generated properly.</strong></p>
+
+		<hr>
+
+		<h3 id="themeoptions"><strong>Theme Options</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag comes with custom Theme Options to allow you to set up many of the theme features without touching the code. To edit the Theme Options, go to <strong>Appearance > Flex Mag Options</strong>.</p>
+
+		<img src="assets/images/options.png" style="margin: 20px 0;" alt="Theme Options" />
+
+			<ol>
+				<li><strong>General</strong> - Here, you will be able to select your "skin" for the theme, upload your custom logo to replace the default logo, upload a custom favicon, enter any custom CSS you need, as well as toggle the responsiveness of the theme, and the Infinite Scrolls feature. <strong style="color: #ef0000;">NOTE: Please click "Save All Changes" in the General Settings section once before you begin in order to register the default theme settings.</strong>
+					<ul>
+						<li><strong>Theme Skin</strong> - Select between the ready-made Sports, Fashion, Entertainment, or Tech skins or a select the Custom skin where you are free to select the and Fonts for your site through the other theme options.</li>
+						<li><strong>Fly-Out Menu Skin</strong> - Choose between a light and dark skin for the Fly-Out menu.</li>
+						<li><strong>Logo Location</strong> - Set the location of your logo.</li>
+						<li><strong>Logo</strong> - Here you can upload an image to serve as your logo that will appear in the floating navigation bar and will replace the default "Flex Mag" logo. The maximum recommended dimensions for this logo are 200x50.</li>
+						<li><strong>Logo in Navigation</strong> - If you are displaying your logo above the navigation, you can upload a separate logo that will appear in the floating navigation bar as you scroll down the page on desktop computers. It will also appear on mobile and tablet devices. The maximum recommended dimensions for this logo are 200x50.</li>
+						<li><strong>Custom Favicon</strong> - Upload a 16px x 16px PNG or GIF file to serve as your favicon.</li>
+						<li><strong>Custom CSS</strong> - Here you can enter any custom CSS code for the theme, which will overwrite any other CSS code. You will not lose any of the custom CSS in this field when you upgrade the theme to a newer version.</li>
+						<li><strong>Toggle Responsiveness</strong> - Uncheck this box if you would like to remove responsive feature of the site that alters the site based on the device it is being viewed on. By disabling this, visitors will see the desktop version of the site no matter what device they are viewing.</li>
+						<li><strong>Toggle Infinite Scroll</strong> - Uncheck this box if you would like to remove the Infinite Scroll feature.</li>
+					</ul>
+				</li>
+				<li><strong>Colors</strong> - Here, you can select which colors you would like to use for your site.
+					<ul>
+						<li><strong>Primary Theme Color</strong> - Select or enter a hexidecimal code for the primary color of the site.</li>
+						<li><strong>Top Navigation Background Color</strong> - Select or enter a hexidecimal code for the background color of the nop navigation bar.</li>
+						<li><strong>Top Navigation Text Color</strong> - Select or enter a hexidecimal code for the background color of the dropdown menus.</li>
+						<li><strong>Top Navigation Text Hover Color</strong> - Select or enter a hexidecimal code for the text color when you mouse over the top navigation.</li>
+						<li><strong>Fly-Out Button Background Color</strong> - The background color of the Fly-Out Menu Button.</li>
+						<li><strong>Fly-Out Button Lines Color</strong> - The background color of the Fly-Out Menu Button Lines.</li>
+						<li><strong>Main Headlines Link Color</strong> - Select or enter a hexidecimal code for the link color of the headlines that appear throughout the site.</li>
+						<li><strong>Main Headlines Link Hover Color</strong> - Select or enter a hexidecimal code for the text color when you mouse over the headline links.</li>
+						<li><strong>Primary Link Color</strong> - Select or enter a hexidecimal code for the primary link color for the site. This will only affect unstyled links.</li>
+						<li><strong>Link Hover Color</strong> - Select or enter a hexidecimal code for the color of links when you hover your mouse over.</li>
+					</ul>
+				</li>
+				<li><strong>Fonts</strong> - Here, you can select from over 700 Google Fonts to set the various fonts for your site. You can browse the list of Google Fonts <a href="https://www.google.com/fonts" target="_blank">here</a>. You can also enter standard web fonts like Arial and Georgia as well.
+					<ul>
+						<li><strong>General Content Font</strong> - Enter the font name for the general font for the content on all pages.</li>
+						<li><strong>Fly-Out Menu/Top Navigation Font</strong> - Enter the font name for the fly-out and top navigation menus.</li>
+						<li><strong>Featured Posts/Article Headline Font</strong> - Enter the font name the font for the headlines in the Featured Posts section and the Article title on posts and pages.</li>
+						<li><strong>General Headline Font</strong> - Enter the font name the font for the general headlines around the site.</li>
+						<li><strong>Heading Font</strong> - Enter the font name the font for the general headings that appear at the top of the different sections around the site.</li>
+					</ul>
+				</li>
+				<li><strong>Homepage Settings</strong> - This is where you will be able to configure the various homepage settings, including the Featured Posts section.
+					<ul>
+						<li><strong>Featured Posts Layout</strong> - Select the layout of your Featured Posts section on the homepage.</li>
+						<li><strong>Show Featured Posts?</strong> - Uncheck this box if you would like to remove the Featured Posts section from the homepage.</li>
+						<li><strong>Featured Posts Tag Slug</strong> - Enter the Tag Slug of the Tag you want associated with the Featured Posts section. Posts with this Tag will be displayed in the Featured Slider at the top of the homepage. You can find the slug for the Tag you want to use by going to <strong>Posts > Tags</strong> and then find the Tag you want to use for the Featured Posts section and find the slug for that Tag in the <strong>Slug</strong> column. To find more information on how to find the Tag Slug, click <a href="https://en.support.wordpress.com/slugs/">here</a>.</li>
+						<li><strong>Featured Heading</strong> - The heading that will be displayed on top of the middle Featured Content section of the homepage.</li>
+						<li><strong>Homepage Body Layout</strong> - Select your layout for the body of the homepage that will appear in the middle column of the homepage.</li>
+						<li><strong>Show Homepag Left Sidebar?</strong> - Uncheck this box if you would like to remove the Left Sidebar from the homepage.</li>
+						<li><strong>Homepage Left Sidebar Layout</strong> - Select your layout for the left sidebar on the homepage.</li>
+						<li><strong>Homepage Right Sidebar Layout</strong> - Select your layout for the right sidebar on the homepage.</li>
+						<li><strong>Number of Posts Per Page</strong> - Set the number of posts per page that you want displayed on the Homepage Blog and the Latest News Template.</li>
+					</ul>
+				</li>
+				<img src="assets/images/featured-slider.png" alt="Featured Slider" />
+				<li><strong>Latest News Settings</strong> - Here you can change the settings for the Latest News column on the homepage.
+					<ul>
+						<li><strong>Latest News Heading</strong> - Set the number of posts to display in the Latest News sidebar.</li>
+						<li><strong>Maximum Number of Latest News Stories</strong> - Set the number of posts to display in the Latest News sidebar.</li>
+						<li><strong>More Latest News Page</strong> - Select the page for your Latest News Template. Refer to the documentation for more information on how to set up custom Page templates.</li>
+						<li><strong>Latest News Position</strong> - Select whether to display the Latest News sidebar on the left or the right of the main section of the homepage.</li>
+						<li><strong>Latest News Ad Code</strong> - Enter your ad code (Eg. Google Adsense) for the 300x250 ad area within the Latest News sidebar. The ad space can accommodate an ad of any height, but with only a maximum width of 300px.</li>
+					</ul>
+				</li>
+				<li><strong>Popular Posts Settings</strong> - Here you can change the settings for the Popular Posts column on the homepage, if you are utliizing that feature.
+					<ul>
+						<li><strong>Popular Posts Heading</strong> - The heading that will be displayed at the top of the Popular Posts column.</li>
+						<li><strong>Number of Popular Posts</strong> - Set the number of posts to display in the Popular Posts sidebar.</li>
+						<li><strong>Popular Posts Days</strong> - Number of days to use for Popular Posts. Only posts published within this length of time will be displayed in the Popular Posts column.</li>
+						<li><strong>Popular Posts Ad Code</strong> - Enter your ad code (Eg. Google Adsense) for the 300x250 ad area within the Popular Posts sidebar. The ad space can accommodate an ad of any height, but with only a maximum width of 300px.</li>
+					</ul>
+				</li>
+				<li><strong>Article Settings</strong> - Here you can toggle the display of featured images, social sharing buttons, author info, and the previous/next story section on all posts.
+					<ul>
+						<li><strong>Show Featured Image In Posts?</strong> - Uncheck this box if you would like to remove the featured image from automatically displaying in all posts.</li>
+						<li><strong>Show Social Sharing Buttons?</strong> - Uncheck this box if you would like to remove the social sharing buttons from all posts.</li>
+						<li><strong>Show Author Info?</strong> - Uncheck this box if you would like to remove the author info from the top of all posts.</li>
+						<li><strong>Show Related Posts?</strong> - Uncheck this box if you would like to remove the Related Posts from the bottom of all posts.</li>
+						<li><strong>Auto Load Previous Post?</strong> - Uncheck this box if you would like to remove the automatic loading of the previous post below the article.</li>
+						<li><strong>Show Previous/Next Post Links</strong> - Uncheck this box if you would like to remove the links to the previous/next posts that appear in the left/right margins of larger resolution screens.</li>
+						<li><strong>Article Sidebar Layout</strong> - Select between a Sidebar, Latest News, or Popular Posts for the sidebar on article pages.</li>
+						<li><strong>Disqus Forum Shortname</strong> - If you want to use Disqus as your commenting system, enter your Disqus Forum Shortname in order to activate Disqus on your site. This is the unique identifier for your website in Disqus (i.e. yourforumshortname.disqus.com).</li>
+						<li><strong>Article Ad Code</strong> - Enter your ad code (Eg. Google Adsense) for the 300x250 ad area within the body of the article. The ad space can accommodate an ad of any height, but with only a maximum width of 300px.</li>
+					</ul>
+				</li>
+				<li><strong>Category Pages</strong> - Here, you can configure the layout of your category pages.
+					<ul>
+						<li><strong>Show Featured Posts?</strong> - Uncheck this box if you would like to remove the Featured Posts section from the top of your category pages.</li>
+						<li><strong>Featured Posts Layout</strong> - Select the layout of your Featured Posts section on the category pages.</li>
+						<li><strong>Category/Archive Body Layout</strong> - Select your layout for the body of your category and archive pages.</li>
+					</ul>
+				</li>
+				<li><strong>Scoreboard Settings</strong> - Here you can set up the optional custom scoreboard feature. For more information on how to enter scores to display in this widget, please refer to the <a href="#scoreboard">Scoreboard</a> section of the documentation.
+					<ul>
+						<li><strong>Show Scoreboard?</strong> - Uncheck this box if you would like to remove the scoreboard feature from the site.</li>
+						<li><strong>Scoreboard Skin</strong> - Choose between a light and dark skin for the Scoreboard.</li>
+						<li><strong>Name of Category X</strong> - Here you can enter a label for your category or sport, such as MLB, NFL, tennis, etc.</li>
+						<li><strong>Select Category X</strong> - Select from any of the scoreboard categories that you created when entering scoreboard data. For more information on how to enter scoreboard data, please refer to the <a href="#scoreboard">Scoreboard</a> section of the documentation.</li>
+					</ul>
+				</li>
+				<li><strong>Social Media</strong> - Here you can enter URLs for several popular social media sites to activate links to each page that will appear in a floating box on the right of the browser window. Simply enter the URL and the link will appear automatically!</li>
+				<li><strong>Ad Management</strong> - Enter ad code for the optional leaderboard banner areas and/or a wallpaper ad.
+					<ul>
+						<li><strong>Leaderboard Location</strong> - Set the location of your header leaderboard.</li>
+						<li><strong>Header Leaderboard Ad Code</strong> - Enter your ad code for the 970x90 leaderboard ad area that will appear at the top of the site. You can also place a 728x90 ad in this area.</li>
+						<li><strong>Responsive Ad Area Below Article</strong> - Enter your ad code (Eg. Google Adsense) to activate the responsive ad area that will be displayed below the content of each article.</li>
+						<li><strong>Wallpaper Ad Image URL</strong> - Enter the URL for the wallpaper image (i.e. http://www.xyzdomain.com/xyz-wallpaper.jpg). Please do not insert the actual ad code for the wallpaper ad, just the image URL. The recommended width of the wallpaper ad is a minimum of 1400px. The recommended height is a minimum of 600px. <strong>NOTE: Due to the nature of wallpaper ads, the content of the site will sit on top of the ad and cover up the middle 1200px of the ad. The only visible area will the the left and right margins of the image which is why the ad should be wider than 1200px.</strong></li>
+						<li><strong>Wallpaper Ad Click-Through URL</strong> - Enter the URL that users will be taken to if they click on the Wallpaper Ad.</li>
+					</ul>
+				</li>
+				<li><strong>Footer Options</strong> - Enter your information for the Footer Info Box.
+					<ul>
+						<li><strong>Show Footer Info Box?</strong> - Uncheck this box if you would like to remove the Footer Info Box. The Footer Info Box will appear as a widget in the Footer Widget Area.</li>
+						<li><strong>Footer Logo</strong> - Here you can select a file to appear as the logo in the Footer Info Box. The recommended maximum width for this logo is 300px.</li>
+						<li><strong>Footer Info Text</strong> - Here you can enter any text to display in the Footer Info Box. You can use HTML in this section to set paragraphs, links, etc.</li>
+						<li><strong>Copyright Text</strong> - Here you can enter any text you want (eg. copyright text).</li>
+					</ul>
+				</li>
+			</ol>
+
+		<hr>
+
+		<h3 id="menus"><strong>Custom Menus</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag supports three custom menu sections: a <strong>Main Menu</strong> for the top navigation bar that will only be visible on desktop devices, a <strong>Fly-Out Menu</strong> that will slide out from the right and will be used on all devices, and a <strong>Footer Menu</strong> that will appear at the very bottom of your site.</p>
+
+		<p>To set up the menus, go to <strong>Appearance > Menus</strong>. Here, you can create a new menu by clicking the <strong>create a new menu</strong> link, give the menu a name, and click <strong>Save Menu</strong> button. You will then see a <strong>Manage Locations</strong> tab appear at the top of the screen. Click the <strong>Manage Locations</strong> tab and then select your newly created menu from the dropdown list of the menu location you would like to set up and click <strong>Save Changes</strong>. You are now able to create a custom link, page or category and add it to your new menu by clicking the <strong>Add to Menu</strong> button.</p>
+
+		<p>If you would like to add a "Home" button, you can do so by adding a "Custom Links" menu item. Enter the URL of your site as the URL and "Home" as the Link Text.</p>
+
+		<p>For more information on how to use the Wordpress custom menu feature, <a href="http://codex.wordpress.org/Appearance_Menus_Screen" target="_blank">click here</a>.</p>
+
+		<p>To utilize the "Megamenu" feature for Category menu items (the Megamenu feature will only work for Categories), do the following:</p>
+
+		<ol>
+			<li>Go to <strong>Appearance > Menus</strong> and click the <strong>Screen Options</strong> button at the top right corner of your screen.</li>
+			<li>Make sure the <strong>CSS Classes</strong> checkbox is checked, then click the <strong>Screen Options</strong> button again to close the Screen Options.</li>
+			<li>In the <strong>Menu Structure</strong> box, select the Categroy menu item you would like to add a Megamenu to by clicking on the down arrow on the right of the menu item.</li>
+			<li>Type <strong>mega-dropdown</strong> in the <strong>CSS Classes (optional)</strong> box</li>
+			<li>Click <strong>Save Menu</strong></li>
+		</ol>
+
+		<img src="assets/images/menus.png" style="margin: 20px 0;" alt="Menus" />
+		<hr>
+
+		<h3 id="widgets"><strong>Widgets</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag comes with 10 custom widgets for use in 6 different widget areas: Homepage Widget Area, Sidebar Widget Area, Home Sidebar Widget Area, Post/Page Sidebar Widget Area, Footer Widget Area, and the WooCommerce Sidebar Widget area if you are using the WooCommerce plugin. To activate the widgets, go to <strong>Appearance > Widgets</strong> and click and drag a widget from the <strong>Available Widgets</strong> section and drop it into any of the 6 different custom widget areas</strong>.</p>
+
+		<p><strong>Widget Areas:</strong></p>
+
+			<ul>
+				<li><strong>Homepage Widget Area</strong> - If you have selected "Widgets" in your Flex Mag Options > Home Body Layout, then this is where you place your widgets to appear below the large Featured Slider area on the homepage.</li>
+				<li><strong>Sidebar Widget Area</strong> - This is where you can place your widgets that will appear in the sidebar of any page on your site other than the homepage, a post/page, or a Woocommerce page.</li>
+				<li><strong>Sidebar Home Widget Area</strong> - This is where you can place your widgets that will appear in the sidebar of your homepage if you have selected to display a sidebar on your homepage.</li>
+				<li><strong>Post/Page Sidebar Widget Area</strong> - This is where you can place widgets that will appear in your Posts/Pages.</li>
+				<li><strong>Footer Widget Area</strong> - This is where you can place your widgets that will appear in the footer of the site.</li>
+				<li><strong>WooCommerce Sidebar Widget Area</strong> - If you are using the WooCommerce plugin, this is where you can place the custom WooCommerce widgets that will appear in the sidebar of your WooCommerce pages.</li>
+			</ul>
+
+		<p><strong>Available Widgets:</strong></p>
+
+			<ul>
+				<li><strong>Flex Mag: Ad Widget</strong> - A widget that displays any sized ad. If you want to place a 300x250 ad in your sidebar, simply place it in one of the sidebar widget areas and then enter your ad code. You can also use this ad to display a leaderboard ad (970x90, 728x90, etc) in the Homepage Widget Area.</li>
+				<li><strong>Flex Mag: Category List Widget</strong> - A widget that features a post from a Category of your choice. Select <strong>All Categories</strong> if you would like to display the most recent posts of all categories.</li>
+				<li><strong>Flex Mag: Category Row Widget</strong> - A widget that displays posts from a Tag of your choice. Select <strong>All Categories</strong> if you would like to display the most recent posts of all categories.</li>
+				<li><strong>Flex Mag: Facebook Widget</strong> - A widget that displays a Facebook Like Box. You can customize the title header, your Facebook page URL, and a few other options to help customize the Like Box to your liking.</li>
+				<li><strong>Flex Mag: Gallery Widget</strong> - A widget that displays a scrolling gallery of images from posts of your choice.</li>
+				<li><strong>Flex Mag: Popular Posts Widget</strong> - A widget that displays a list of popular posts within a time period of your choice.</li>
+				<li><strong>Flex Mag: Tag Cloud Widget</strong> - A custom Tag Cloud widget.</li>
+				<li><strong>Flex Mag: Tag Featured Widget</strong> - A widget that prominently features posts from a Tag of your choice.</li>
+				<li><strong>Flex Mag: Tag List Widget</strong> - A widget that displays posts from a Tag of your choice.</li>
+				<li><strong>Flex Mag: Tag Row Widget</strong> - A widget that displays posts from a Tag of your choice.</li>
+			</ul>
+
+
+		<img src="assets/images/widgets2.png" style="margin: 20px 0;" alt="Widgets Admin" />
+
+		<hr>
+
+		<h3 id="images"><strong>Images</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag supports retina-ready images. To utilize this feature, follow these instructions:
+
+		<ol>
+			<li>Create a second image that is twice the size of your existing image. For example, if your logo is 200x60, your retina image would need to be 400x100.
+			<li>Add <strong>@2x</strong> to the end of the name of the retina image. For example, if your logo is called logo.png, name your retina version logo@2x.png.
+			<li>Upload the retina image in the same directory as your non-retina image. For example, if your logo is located in <strong>/wp-content/themes/flex-mag/images/</strong>, you must upload the retina version in this directory.
+			<li>That's it!</strong>
+
+		</ol>
+
+		<p>Flex Mag utilizes Wordpress' built-in <strong>Featured Image</strong> feature to handle image management. <span style="color: #f00; font-weight: bold;">The recommended size for images to show properly within posts and in the Featured Posts area on the homapage and category pages is 1000x600px. If you plan to use the Full-Width Featured Posts option or the Full-Width Article image options, the recommend Featured Image dimensions are 1600x960px.</p>
+
+		<p>To set the featured image for a post, go to <strong>Posts > Add New</strong> (or edit an existing post) and click the <strong>Upload/Insert</strong> icon above the main text box. From here, choose a file and upload it. Once it is uploaded, click <strong>Use as featured image</strong> located near the bottom of the <strong>Add Media</strong> window. Then click <strong>Save all changes</strong>, close the <strong>Add Media</strong> window and you're good to go! Flex Mag will take care of the rest in generating the smaller thumbnails that show up in the various places around the site.</p>
+
+		<hr>
+
+		<h3 id="background"><strong>Background</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag utilizes Wordpress' built-in <strong>Custom Backgrounds</strong> feature to set up your custom background color and/or image. For more information on how to set up your custom background, click <a href="http://en.support.wordpress.com/themes/custom-backgrounds/">here</a>.</p>
+
+		<hr>
+
+		<h3 id="post-options"><strong>Post Options</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag gives you a variety of custom options for your posts, inlcuding a custom Image Gallery, a Featured Headline feature, and the ability to set a full-width posts.</p>
+
+		<ul>
+			<li><strong>Flex Mag Image Gallery</strong> - Flex Mag comes with an easy-to-uuse custom Image Gallery. In order to utilize the built-in Image Gallery, you can either add a new post by going to <strong>Posts > Add New</strong> (or edit an existing post) and select the <strong>Gallery</strong> radio button in the <strong>Format</strong> box on the right side of the screen. Then, you can add images to your post by clicking the <strong>Add Media</strong> button above the main text box, then click the <strong>Upload Files</strong> tab and upload the images you want to include in the Image Gallery. You do not need to insert the images into the post, so once you upload the image(s), they will appear in the gallery for that post. So, once the image(s) are uploaded, you can close the <strong>Insert Media</strong> screen by clicking on the <strong>X</strong> in the upper right corner, then you can save/publish your post and the Image Gallery will appear at the top of your post.</li>
+			<li><strong>Post Formats</strong> - Flex Mag comes utilizes WordPress' built in Post Formats feature where you can select the type of post you are creating. For example, if you have a video in the post, you should go to the <strong>Format</strong> box and select the <strong>Video</strong> radio button, which will activate the transparent video overlay on posts throughout the site that will show visitors that there is a video in the post.</li>
+			<li><strong>Video/Audio Posts</strong> - Flex Mag allows you to replace the default Featured Image in posts with an embedded video or audio clip. To utilize this feature, go to <strong>Posts > Add New</strong> (or edit an existing post) and enter your embed code (HTML or Javascript) in the box titled <strong>Video/Audio Embed</strong>.</li>
+			<li><strong>Featured Headline</strong> - Flex Mag allows you to enter a separate, smaller headline for use in the Featured Posts area on the homepage. To utilize this feature, go to <strong>Posts > Add New</strong> (or edit an existing post) and enter your featured headline in the box titled <strong>Featured Headline</strong>.</li>
+			<li><strong>Featured Image Excerpt</strong> - You can add a custom excerpt to overlay on top of the Featured Image on your posts within the Post Edit screen. At the top right corner, click "Screen Options" and make sure "Excerpt" is checked and then scroll down to the Excerpt box and enter your own custom excerpt that will take the place of the default text. This text will also appear around the site where excerpts are used (i.e. in widgets and archive pages).</li>
+			<li><strong>Featured Image Caption</strong> - Flex Mag allows you to enter a caption (which can also be used as a photo credit) for your Featured Images within posts. This will be displayed just below the featured image. To utilize this feature, go to <strong>Posts > Add New</strong> (or edit an existing post) and enter your photo credit in the box titled <strong>Photo Credit</strong>. You can also use HTML in this space.</li>
+			<li><strong>Post Template</strong> - Select between 8 different Post Templates. To utilize this feature, go to <strong>Posts > Add New</strong> (or edit an existing post) and select a layout from the dropdown box in the <strong>Post Template</strong> section on the right sidebar.</li>
+			<li><strong>Show/Hide Featured Image</strong> - Flex Mag allows you to remove the featured image from individual posts. To utilize this feature, go to <strong>Posts > Add New</strong> (or edit an existing post) and select "Hide" from the dropdown box in the <strong>Featured Image Show/Hide</strong> section on the right sidebar.</li>
+		</ul>
+
+		<hr>
+
+		<h3 id="page-templates"><strong>Page Templates</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag comes with 5 custom page templates: Home, Authors List, Latest News, Full-Width, and Videos. In order to create a custom page template
+
+		<ol>
+			<li>Go to <strong>Pages > Add New</strong>. Enter a title in the <strong>Enter a title here</strong> box.
+			<li>In the<strong>Page Attributes</strong> section, select the page template you want to use from the <strong>Templates</strong> dropdown menu on the right.</li>
+			<li>Click <strong>Publish</strong> and that's it!</li>
+		</ol>
+
+		<hr>
+
+		<h3 id="scoreboard"><strong>Scoreboard</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag comes with a custom Scoreboard plugin that allows you to quickly enter and update scores to display in the custom scoreboard area. Here are the instructions for setting up your scoreboard posts:</p>
+
+			<ol>
+				<li>Go to <strong>Plugins > Add New</strong> then click the <strong>Upload</strong> link at the top.</li>
+				<li>Click <strong>Choose File</strong> and select the <strong>mvp-scoreboard.zip</strong> file (located in the /plugins folder of your original zip file you downloaded from Themeforest), then click <strong>Install Now</strong>.</li>
+				<li>After the plugin installs, click the <strong>Activate Plugin</strong> link.</li>
+				<li>Go to the <strong>Scores</strong> section of your Wordpress backend.</li>
+				<li>To add a new score, click <strong>Add New</strong>.</li>
+				<li>Enter a title for the score entry (this will only be used if you use the "link" feature to make scores clickable to create previews, recaps, or game stories for each scoreboard item).</li>
+				<li>Next, if you plan to create a preview, recap, or game story, you can enter that information in the main text editor area</li>
+				<li>Then look for the <strong>Scores Info</strong> box, which is below main text entry box. Here, you can enter a <strong>Score Status</strong> (e.g. <strong>Final</strong> or <strong>Sat 8:00pm</strong>), enter the abbreviations of the home and away teams, enter the scores for each team, and select whether you want to actually display the numerical score in the scoreboard and whether you want to link the scoreboard item to the post. The <strong>Display Numerical Score</strong> feature is used for scoreboard items that haven't occurred yet. So, instead of displayin the default 0-0 score, you can hide the score and then check the box once the game begins or ends.</li>
+				<li>Next, you will need to select or add a new catgory (e.g. MLB or Football) via the <strong>Score Categories</strong> box, located in the right sidebar of the post screen. Click <strong>Add New Category</strong> to associate this score with a category.</li>
+				<li>Once you have entered a title, entered information in the <strong>Scores Info</strong> box and then selected (or added a new) category, click the <strong>Publish</strong> button and that's it!
+				<li>Make sure that you have set up your <strong>Scoreboard Settings</strong> in the Flex Mag Options and you should be good to go!
+			</ol>
+
+		<img src="assets/images/scoreboard.png" alt="Scoreboard" />
+
+		<hr>
+
+		<h3 id="sidebars"><strong>Sticky Sidebars (Theia Sticky Sidebar)</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag utilizes Theia Sticky sidebar to allow sidebar content to stay stay visible within each section as you scroll down the page. Here are the instructions to install and set up Theia Sticky Sidebar for Flex Mag:</p>
+
+		<ol>
+			<li>Go to <strong>Plugins > Add New</strong> then click the <strong>Upload</strong> link at the top.</li>
+			<li>Click <strong>Choose File</strong> and select the <strong>theia-sticky-sidebar.zip</strong> file (located in the /plugins folder of your original zip file you downloaded from Themeforest), then click <strong>Install Now</strong>.</li>
+			<li>After the plugin installs, click the <strong>Activate Plugin</strong> link.</li>
+		</ol>
+
+		<p>To customize Theia Sticky Sidebar to your liking, you can edit the slider settings by going to <strong>Settings > Theia Sticky Sidebar</strong>. <a href="theia-sticky-sidebar/index.html">Click here</a> for the full documentation for Theia Sticky Sidebar.</p>
+
+		<p>Once you are in the Theia Sticky Sidebar Settings (<strong>Settings > Theia Post Slider</strong>), you will need to go to the <strong>General</strong> tab and enter the following into the <strong>Sidebar CSS Selector</strong> box: <strong>#post-right-col,#post-sidebar-wrap,.home-mid-col,.home-right-col,#arch-right-col</strong>
+
+		<p>Then, in the <strong>Sidebar additional top margin (px)</strong> box, you will need to enter a value of <strong>65</strong>, in the <strong>Sidebar additional bottom margin (px)</strong>, enter <strong>15</strong>, and in the <strong>Minimum width (px)</strong> box, enter <strong>767</strong>. That's it! Your sidebars should now be sticky throughout your site!
+
+		<hr>
+
+		<h3 id="authorinfo"><strong>Author Info</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag allows you to display information about the author on each post.</p>
+		<ul>
+			<li><strong>Author Description</strong> - You can enter an author description via the author's user profile in the <strong>Biographical Info</strong> section. This description will show up on the author's individual author page as well as the author list page.</li>
+			<li><strong>Author Avatar</strong> - Flex Mag utilizes Gravatar to display the author's avatar in the author info below each post. Please sign up at <a href="http://www.gravatar.com" target="_blank">Gravatar.com</a> with the email address you are using with the author on your site. Once you have associated an avatar with this email, this avatar will appear in the author info as well as in the comments section of the site.</li>
+			<li><strong>Author Social Profiles</strong> - Enter the URLs in the user's profile for each of the popular Social Media sites in order to activate the social buttons that will appear on the author page and the author list page.</li>
+		</ul>
+
+		<img src="assets/images/author-info.png" style="margin: 20px 0;" alt="Author Info" />
+
+		<hr>
+
+		<h3 id="translation"><strong>Translation Files</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag comes translation-ready with .po/.mo files ready for translation. These files are located in the <strong>/languages</strong> folder of the main theme folder. Once you have translated the files, simply save them with the name of your <a href="http://codex.wordpress.org/WordPress_in_Your_Language" target="_blank">language code</a> (i.e. es_ES.po and es_ES.mo for Spanish) and place them back in the /languages folder.</p>
+
+		<p>For more information on how to utilize these files to translate this theme into another language, <a href="http://www.solostream.com/blog/tutorials/translate-wordpress-theme/" target="_blank">click here</a>.
+
+		<hr>
+
+		<h3 id="woocommerce"><strong>WooCommerce</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag is fully compatible with the popular e-commerce plugin WooCommerce, which will allow you to create a store within your site. You can download WooCommerce <a href="http://www.woothemes.com/woocommerce/" target="_blank">here</a>. Once you have downloaded the plugin, follow these instructions to install the plugin with Wordpress:</p>
+
+		<ol>
+			<li>Go to <strong>Plugins > Add New</strong></li>
+			<li>Select the <strong>Upload</strong> link at the top.</li>
+			<li>Click <strong>Choose File</strong> and select the <strong>woocommerce.zip</strong> file that you downloaded, then click <strong>Install Now</strong>.
+		</ol>
+
+		<p>Once the plugin is activated, WooCommerce will need to install several pages in order for it to function properly. Click <a href="http://docs.woothemes.com/documentation/plugins/woocommerce/" target="_blank">here</a> for more information about setting up WooCommerce.</p>
+
+		<hr>
+
+		<h3 id="bbpress"><strong>bbPress</strong> - <a href="#toc">top</a></h3>
+
+		<p>Flex Mag is fully compatible with the popular forum plugin bbPress, which will allow you to add a forum to your site. You can download bbPress <a href="http://bbpress.org/download/" target="_blank">here</a>. Once you have downloaded the plugin, follow these instructions to install the plugin with Wordpress:</p>
+
+		<ol>
+			<li>Go to <strong>Plugins > Add New</strong></li>
+			<li>Select the <strong>Upload</strong> link at the top.</li>
+			<li>Click <strong>Choose File</strong> and select the <strong>bbpress.xxx.zip</strong> file that you downloaded, then click <strong>Install Now</strong>.
+		</ol>
+
+		<p>Click <a href="http://codex.bbpress.org/" target="_blank">here</a> for more information about setting up bbPress.</p>
+
+		<hr>
+
+		<h3 id="css"><strong>CSS Files</strong> - <a href="#toc">top</a></h3>
+
+			<ul>
+				<li><strong>style.css</strong> - Main theme stylesheet</li>
+				<li><strong>iecss.css</strong> - Stylesheet with code for IE8 and earlier version browsers.</li>
+				<li><strong>media-queries.css</strong> - Stylesheet with the responsive CSS utilizing Media Queries.</li>
+				<li><strong>reset.css</strong> - The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on.</li>
+			</ul>
+
+		<hr>
+
+		<h3 id="js"><strong>Javascript Files</strong> - <a href="#toc">top</a></h3>
+
+			<ul>
+				<li><strong>/js/autoloadpost.js</strong> - Used for the auto loading posts feature on posts.</li>
+				<li><strong>/js/jquery.elsatislide.js</strong> - Used for the scoreboard feature.</li>
+				<li><strong>/js/jquery.history.js</strong> - Used for the auto loading posts feature on posts.</li>
+				<li><strong>/js/jquery.infinitescroll.js</strong> - Used for the Infinite Scroll feature that continually loads posts without having to click to the next page (like Facebook or Buzzfeed).</li>
+				<li><strong>/js/jquery.nicescroll.min.js</strong> - Used for the scrolling feature in the menu.</li>
+				<li><strong>/js/manual-trigger.js</strong> - Used for the Infinite Scroll feature.</li>
+				<li><strong>/js/retina.js</strong> - Adds the retina functionality.</li>
+				<li><strong>/js/scripts.js</strong> - Used for various custom javascript functions for use in the theme.</li>
+				<li><strong>/js/scrollspy.js</strong> - Used for the auto loading posts feature on posts.</li>
+			</ul>
+
+		<hr>
+
+		<h3 id="support"><strong>Support</strong> - <a href="#toc">top</a></h3>
+		<p>If you have any questions related to setting up the theme that are not covered in this documentation or if you encounter any technical bugs, please submit a ticket at the <a href="http://www.mvpthemes.com/support" target="_blank">MVP Themes Support Center</a>. Please note that this theme is sold "as-is" and any additional custom modifications you would like to make to the theme are your responsibility.</p>
+
+		<hr>
+
+		<h3 id="credits"><strong>Sources and Credits</strong> - <a href="#toc">top</a></h3>
+
+		<p>I have used the following images or other files as listed.</p>
+
+		<ul>
+			<li>Stock images in preview file from Shutterstock.com - <a href="http://www.shutterstock.com" target="_blank">http://www.shutterstock.com</a></li>
+			<li>Theia Sticky Sidebar - <a href="http://codecanyon.net/item/theia-sticky-sidebar-for-wordpress/5150066" target="_blank">http://codecanyon.net/item/theia-sticky-sidebar-for-wordpress/5150066</a></li>
+		</ul>
+
+		<hr>
+
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+		<p class="append-bottom alt large"><strong>MVP Themes</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

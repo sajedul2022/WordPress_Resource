@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NewsFeed</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/li-scroller.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="customStyle.css">
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+    <div class="container">
+      <header id="header">
+
+        <!-- Breaking Bews -->
+        <section id="newsSection">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="latest_newsarea"> <span>Latest News</span>
+              <ul id="ticker01" class="news_sticker">
+                <li><a href="#">Israel, Arab nations deepen cooperation</a></li>
+                <li><a href="#">Revival of rivals’ talks: Iraqi PM arrives</a></li>
+                <li><a href="#">Tensions between Iran and Saudi Arabia rose 2019An Iranian official told Reuters "the resumption</a></li>
+                <li><a href="#">The fifth round of talks were held in April. Kadhimi's visit comes as a months-long impasse. An Iranian official told Reuters</li>
+              </ul>
+              <div class="social_area">
+                <ul class="social_nav">
+                  <li class="facebook"><a href="#"></a></li>
+                  <li class="twitter"><a href="#"></a></li>
+                  <li class="flickr"><a href="#"></a></li>
+                  <li class="pinterest"><a href="#"></a></li>
+                  <li class="googleplus"><a href="#"></a></li>
+                  <li class="vimeo"><a href="#"></a></li>
+                  <li class="youtube"><a href="#"></a></li>
+                  <li class="mail"><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Breking News -->
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="header_top">
+            <div class="header_top_left">
+              <ul class="top_nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/single_page.html">Tech & Startup </a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="header_top_right">
+              <p>Wednesday, June 29, 2022</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="header_bottom">
+            <div class="logo_area"><a href="index.html" class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/logo.jpg" alt=""></a></div>
+            <div class="add_banner"><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/addbanner_728x90_V1.jpg" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="navArea">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav main_nav">
+            <li class="active"><a href="index.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+            <li><a href="pages/single_page.html">Technology</a></li>
+            <li class="dropdown"> <a href="pages/single_page.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Feature </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="pages/single_page.html"> Sports</a></li>
+              <li><a href="pages/single_page.html">Environment </a></li>
+              <li><a href="pages/single_page.html">NRB</a></li>
+              <li><a href="pages/single_page.html">Mobile News</a></li>
+              <li><a href="pages/single_page.html">Tech</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/single_page.html"> Business </a></li>
+          <li><a href="pages/single_page.html">Entertainment</a></li>
+          <li><a href="pages/single_page.html"> Life & Living </a></li>
+          <li><a href="pages/single_page.html">Tech & Startup </a></li>
+          <li><a href="pages/single_page.html">Environment </a></li>
+          <li><a href="pages/single_page.html">Sports </a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  
+  <section id="sliderSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="slick_slider">
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo get_template_directory_uri() ?>/images/slider_img4.jpg" alt=""></a>
+          <div class="slider_article">
+            <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
+            <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui.</p>
+          </div>
+        </div>
+        <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo get_template_directory_uri() ?>/images/slider_img2.jpg" alt=""></a>
+        <div class="slider_article">
+          <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
+          <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
+        </div>
+      </div>
+      <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo get_template_directory_uri() ?>/images/slider_img3.jpg" alt=""></a>
+      <div class="slider_article">
+        <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
+        <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
+      </div>
+    </div>
+    <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo get_template_directory_uri() ?>/images/slider_img1.jpg" alt=""></a>
+    <div class="slider_article">
+      <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
+      <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="latest_post">
+  <h2><span>Latest post</span></h2>
+  <div class="latest_post_container">
+    <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+    <ul class="latest_postnav">
+      <li>
+        <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+        <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Israel, Arab nations deepen cooperation</a> </div>
+      </div>
+    </li>
+    <li>
+      <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Revival of rivals’ talks: Iraqi PM arrives</a> </div>
+    </div>
+  </li>
+  <li>
+    <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/slider_img1.jpg"> </a>
+    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Tensions between Iran and Saudi Arabia rose 2019</a> </div>
+  </div>
+</li>
+<li>
+  <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/slider_img2.jpg"> </a>
+  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters "the resumption</a> </div>
+</div>
+</li>
+<li>
+<div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> The fifth round of talks were held in April</a> </div>
+</div>
+</li>
+</ul>
+<div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contentSection">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8">
+<div class="left_content">
+<div class="single_post_content">
+<h2><span>Business</span></h2>
+<div class="single_post_content_left">
+<ul class="business_catgnav  wow fadeInDown">
+<li>
+<figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/featured_img1.jpg"> <span class="overlay"></span> </a>
+<figcaption> <a href="pages/single_page.html">Israel, Arab nations deepen cooperation
+</a> </figcaption>
+<p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a phare...</p>
+</figure>
+</li>
+</ul>
+</div>
+<div class="single_post_content_right">
+<ul class="spost_nav">
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Revival of rivals’ talks: Iraqi PM arrives</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Tensions between Iran and Saudi Arabia rose 2019</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters "the resumption
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> The fifth round of talks were held in April
+</a> </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="fashion_technology_area">
+<div class="fashion">
+<div class="single_post_content">
+<h2><span>Fashion</span></h2>
+<ul class="business_catgnav wow fadeInDown">
+<li>
+<figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/featured_img2.jpg"> <span class="overlay"></span> </a>
+<figcaption> <a href="pages/single_page.html">Kadhimi's visit comes as a months-long impasse</a> </figcaption>
+<p>An Iranian official told Reuters he fifth round of talks were held in April
+severity and scale of the conflict UN human rights chief Michelle The toll included those killed as a direct...</p>
+</figure>
+</li>
+</ul>
+<ul class="spost_nav">
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Fifth round of talks were held in April
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> severity and scale of the conflict
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> UN human rights chief Michelle 
+</a> </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="technology">
+<div class="single_post_content">
+<h2><span>Technology</span></h2>
+<ul class="business_catgnav">
+<li>
+<figure class="bsbig_fig wow fadeInDown"> <a href="pages/single_page.html" class="featured_img"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/featured_img3.jpg"> <span class="overlay"></span> </a>
+<figcaption> <a href="pages/single_page.html">Revival of rivals’ talks: Iraqi PM arrives
+</a> </figcaption>
+<p>Tensions between Iran and Saudi Arabia rose 2019.An Iranian official told Reuters "the resumption.The fifth round of talks were held in April.Kadhimi's visit comes as a months-long impasse...</p>
+</figure>
+</li>
+</ul>
+<ul class="spost_nav">
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Tensions between Iran and Saudi Arabia rose 2019
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters "the resumption
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> The fifth round of talks were held in April
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Kadhimi's visit comes as a months-long impasseTensions between Iran and Saudi </a> </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="single_post_content">
+<h2><span>Photography</span></h2>
+<ul class="photograph_nav  wow fadeInDown">
+<li>
+<div class="photo_grid">
+<figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img2.jpg" title="Photography Ttile 1"> <img src="<?php echo get_template_directory_uri() ?>/images/photograph_img2.jpg" alt=""/></a> </figure>
+</div>
+</li>
+<li>
+<div class="photo_grid">
+<figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img3.jpg" title="Photography Ttile 2"> <img src="<?php echo get_template_directory_uri() ?>/images/photograph_img3.jpg" alt=""/> </a> </figure>
+</div>
+</li>
+<li>
+<div class="photo_grid">
+<figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img4.jpg" title="Photography Ttile 3"> <img src="<?php echo get_template_directory_uri() ?>/images/photograph_img4.jpg" alt=""/> </a> </figure>
+</div>
+</li>
+<li>
+<div class="photo_grid">
+<figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img4.jpg" title="Photography Ttile 4"> <img src="<?php echo get_template_directory_uri() ?>/images/photograph_img4.jpg" alt=""/> </a> </figure>
+</div>
+</li>
+<li>
+<div class="photo_grid">
+<figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img2.jpg" title="Photography Ttile 5"> <img src="<?php echo get_template_directory_uri() ?>/images/photograph_img2.jpg" alt=""/> </a> </figure>
+</div>
+</li>
+<li>
+<div class="photo_grid">
+<figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img3.jpg" title="Photography Ttile 6"> <img src="<?php echo get_template_directory_uri() ?>/images/photograph_img3.jpg" alt=""/> </a> </figure>
+</div>
+</li>
+</ul>
+</div>
+<div class="single_post_content">
+<h2><span>Games</span></h2>
+<div class="single_post_content_left">
+<ul class="business_catgnav">
+<li>
+<figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="pages/single_page.html"> <img src="<?php echo get_template_directory_uri() ?>/images/featured_img1.jpg" alt=""> <span class="overlay"></span> </a>
+<figcaption> <a href="pages/single_page.html">Arabia rose 2019
+An Iranian official told Reuters </a> </figcaption>
+<p>Nunc tincidunt,"the resumption.The fifth round of talks were held in April.Kadhimi's visit comes as a months-long impasse...</p>
+</figure>
+</li>
+</ul>
+</div>
+<div class="single_post_content_right">
+<ul class="spost_nav">
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> 
+Kadhimi's visit comes as a months-long impasse</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Round of talks were held in April
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Severity and scale of the conflict
+</a> </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<aside class="right_content">
+<div class="single_sidebar">
+<h2><span>Popular Post</span></h2>
+<ul class="spost_nav">
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> UN human rights chief Michelle </a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Revival of rivals’ talks: Iraqi PM arrives
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Tensions between Iran and Saudi Arabia rose 2019
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters "the resumption
+</a> </div>
+</div>
+</li>
+</ul>
+</div>
+<div class="single_sidebar">
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
+<li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
+<li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>
+</ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="category">
+<ul>
+<li class="cat-item"><a href="#">Sports</a></li>
+<li class="cat-item"><a href="#">Fashion</a></li>
+<li class="cat-item"><a href="#">Business</a></li>
+<li class="cat-item"><a href="#">Technology</a></li>
+<li class="cat-item"><a href="#">Games</a></li>
+<li class="cat-item"><a href="#">Life &amp; Style</a></li>
+<li class="cat-item"><a href="#">Photography</a></li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane" id="video">
+<div class="vide_area">
+<iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="comments">
+<ul class="spost_nav">
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Revival of rivals’ talks: Iraqi PM arrives
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Tensions between Iran and Saudi Arabia rose 2019
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img1.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> An Iranian official told Reuters "the resumption
+</a> </div>
+</div>
+</li>
+<li>
+<div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" <src="<?php echo get_template_directory_uri()?>/images/post_img2.jpg"> </a>
+<div class="media-body"> <a href="pages/single_page.html" class="catg_title"> The fifth round of talks were held in April
+</a> </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="single_sidebar wow fadeInDown">
+<h2><span>Sponsor</span></h2>
+<a class="sideAdd" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/add_img.jpg" alt=""></a> </div>
+<div class="single_sidebar wow fadeInDown">
+<h2><span>Category Archive</span></h2>
+<select class="catgArchive">
+<option>Select Category</option>
+<option>Life styles</option>
+<option>Sports</option>
+<option>Technology</option>
+<option>Treads</option>
+</select>
+</div>
+<div class="single_sidebar wow fadeInDown">
+<h2><span>Links</span></h2>
+<ul>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Rss Feed</a></li>
+<li><a href="#">Login</a></li>
+<li><a href="#">Life &amp; Style</a></li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<footer id="footer">
+<div class="footer_top">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="footer_widget wow fadeInLeftBig">
+<h2>About</h2>
+The Telegraph is a major Bangladeshi English-language daily newspaper based Worldwide , It also operates an online Bengali version known as the Bangla Telegraph.
+Telegraph is here to be the platform for that new voice, and new vision. Our pledge to those we serve is to seek the truth, deliver the facts and offer. <br>
+It also operates an online Bengali version known as the Bangla Telegraph.
+Telegraph is here to be the platform for that new voice, and new vision. <br>
+It also operates an online Bengali version known as the Bangla Telegraph.
+Telegraph is here to be the platform for that new voice, and new vision. Our pledge to those we serve is to seek the truth, deliver the facts and offer.
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="footer_widget wow fadeInDown">
+<h2>Tag</h2>
+<ul class="tag_nav">
+<li><a href="#">Games</a></li>
+<li><a href="#">Sports</a></li>
+<li><a href="#">Fashion</a></li>
+<li><a href="#">Business</a></li>
+<li><a href="#">Life &amp; Style</a></li>
+<li><a href="#">Technology</a></li>
+<li><a href="#">Photo</a></li>
+<li><a href="#">Slider</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="footer_widget wow fadeInRightBig">
+<h2>Contact</h2>
+<p>Office: 48116830-31
+Advertising: 48116865
+Fax: News: 48116887
+info@dhakatelgraph.com, news@dhakatelgraph.com, contact@dhakatelgraph.com</p>
+<address>
+Copyright Ⓒ 2012-2022. 2A Media Limited, All Rights Reserved.
+8/C, FR Tower, Panthapath, Dhaka 1207, Bangladesh.
+Kazi Anis Ahmed, Publisher
+</address>
+</div>
+</div>
+</div>
+</div>
+<div class="footer_bottom">
+<p class="copyright">Copyright &copy; 2022  <a href="../index.html">NewsFeed</a></p>
+<p class="developer">Developed By Sajedul Islam</p>
+</div>
+</footer>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.li-scroller.1.0.js"></script>
+<script src="assets/js/jquery.newsTicker.min.js"></script>
+<script src="assets/js/jquery.fancybox.pack.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
